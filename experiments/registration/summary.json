@@ -1,0 +1,17 @@
+{
+ "n_pairs": 48,
+ "n_reliable": 48,
+ "failure_rate": 0.0,
+ "lung_dice_after_mean": 0.9718666162723322,
+ "lung_dice_before_mean": 0.8909311991436001,
+ "config": {
+  "method": "rigid",
+  "sampling_percentage": 0.2,
+  "iterations": 200,
+  "bspline_mesh": 6,
+  "bspline_iterations": 60,
+  "min_lung_dice": 0.85,
+  "min_ncc_lung": 0.3,
+  "seed": 42
+ }
+}

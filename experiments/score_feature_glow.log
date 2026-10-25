@@ -1,0 +1,14 @@
+calibration {'mean': 96.62821197509766, 'std': 50.24650573730469, 'n_voxels': 1634761} 804.1s
+SYN-0002-T1 152.28s vol_score=4.66
+SYN-0002-T2 150.04s vol_score=4.58
+SYN-0008-T1 147.91s vol_score=4.10
+SYN-0008-T2 177.86s vol_score=4.04
+SYN-0011-T1 145.68s vol_score=5.19
+SYN-0011-T2 145.88s vol_score=5.36
+SYN-0012-T1 99.2s vol_score=5.50
+SYN-0012-T2 95.87s vol_score=5.12
+SYN-0013-T1 113.97s vol_score=4.95
+SYN-0013-T2 110.81s vol_score=4.43
+SYN-0016-T1 97.99s vol_score=5.41
+SYN-0016-T2 118.0s vol_score=5.04
+SYN-0017-T1 88.43s vol_score=4.83

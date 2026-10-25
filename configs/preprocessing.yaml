@@ -1,0 +1,8 @@
+target_spacing: [2.5, 2.5, 2.5]   # mm (x, y, z), isotropic resampling
+window_center: -600               # lung window (HU)
+window_width: 1500
+normalize: window_minus1_1        # clip to window, scale to [-1, 1]
+lung_mask_method: auto            # auto: pretrained lungmask R231, threshold fallback + QC
+lungmask_weights: weights/unet_r231-d5d2fc3d.pth
+min_lung_volume_ml: 500
+max_lung_volume_ml: 9000

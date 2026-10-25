@@ -1,0 +1,4218 @@
+{
+ "evaluation_set": "test split (patient-level, held out)",
+ "dataset": "SYNTHETIC chest CT phantoms",
+ "n_test_patients": 10,
+ "n_test_exams": 20,
+ "n_test_pairs": 10,
+ "anomaly": {
+  "intensity_baseline": {
+   "detector": "intensity_baseline",
+   "threshold": 5.0,
+   "threshold_selected_on": "validation",
+   "n_test_exams": 20,
+   "candidate_rule": {
+    "min_volume_mm3": 400.0,
+    "min_peak_score": 5.0,
+    "selected_on": "validation lesion-level F1"
+   },
+   "n_test_abnormal_exams": 13,
+   "voxel_level": {
+    "unit": "lung voxels (all lesion voxels + <=15k random lung voxels per exam)",
+    "auroc": 0.9927720858731688,
+    "average_precision": 0.7911005581331569,
+    "n_voxels": 303117,
+    "positive_fraction": 0.01028315798849949
+   },
+   "exam_level": {
+    "unit": "examination (volume score = mean of top 0.1% voxel scores)",
+    "auroc": 0.9780219780219781,
+    "average_precision": 0.9885883347421807
+   },
+   "segmentation": {
+    "unit": "per abnormal exam, voxel-level at val threshold; patient-level bootstrap CI",
+    "dice_mean": 0.5826420620403354,
+    "dice_median": 0.625,
+    "dice_ci": {
+     "point": 0.5826420620403354,
+     "ci95": [
+      0.45319269760613534,
+      0.7004522546573837
+     ]
+    },
+    "iou_mean": 0.43680052539213143,
+    "sensitivity_mean": 0.5191904453602448,
+    "precision_mean": 0.6829676395821024,
+    "per_exam": [
+     {
+      "exam_id": "SYN-0016-T1",
+      "tp": 184,
+      "fp": 17,
+      "fn": 51,
+      "dice": 0.8440366972477065,
+      "iou": 0.7301587301587301,
+      "precision": 0.9154228855721394,
+      "sensitivity": 0.7829787234042553,
+      "f1": 0.8440366972477064
+     },
+     {
+      "exam_id": "SYN-0016-T2",
+      "tp": 166,
+      "fp": 92,
+      "fn": 105,
+      "dice": 0.6275992438563327,
+      "iou": 0.4573002754820937,
+      "precision": 0.6434108527131783,
+      "sensitivity": 0.6125461254612546,
+      "f1": 0.6275992438563328
+     },
+     {
+      "exam_id": "SYN-0020-T1",
+      "tp": 22,
+      "fp": 39,
+      "fn": 63,
+      "dice": 0.3013698630136986,
+      "iou": 0.1774193548387097,
+      "precision": 0.36065573770491804,
+      "sensitivity": 0.25882352941176473,
+      "f1": 0.30136986301369867
+     },
+     {
+      "exam_id": "SYN-0020-T2",
+      "tp": 190,
+      "fp": 22,
+      "fn": 206,
+      "dice": 0.625,
+      "iou": 0.45454545454545453,
+      "precision": 0.8962264150943396,
+      "sensitivity": 0.4797979797979798,
+      "f1": 0.625
+     },
+     {
+      "exam_id": "SYN-0032-T1",
+      "tp": 210,
+      "fp": 52,
+      "fn": 109,
+      "dice": 0.7228915662650602,
+      "iou": 0.5660377358490566,
+      "precision": 0.8015267175572519,
+      "sensitivity": 0.658307210031348,
+      "f1": 0.7228915662650602
+     },
+     {
+      "exam_id": "SYN-0032-T2",
+      "tp": 161,
+      "fp": 43,
+      "fn": 92,
+      "dice": 0.7045951859956237,
+      "iou": 0.543918918918919,
+      "precision": 0.7892156862745098,
+      "sensitivity": 0.6363636363636364,
+      "f1": 0.7045951859956237
+     },
+     {
+      "exam_id": "SYN-0040-T1",
+      "tp": 210,
+      "fp": 50,
+      "fn": 85,
+      "dice": 0.7567567567567568,
+      "iou": 0.6086956521739131,
+      "precision": 0.8076923076923077,
+      "sensitivity": 0.711864406779661,
+      "f1": 0.7567567567567568
+     },
+     {
+      "exam_id": "SYN-0041-T1",
+      "tp": 90,
+      "fp": 97,
+      "fn": 128,
+      "dice": 0.4444444444444444,
+      "iou": 0.2857142857142857,
+      "precision": 0.48128342245989303,
+      "sensitivity": 0.41284403669724773,
+      "f1": 0.4444444444444445
+     },
+     {
+      "exam_id": "SYN-0041-T2",
+      "tp": 7,
+      "fp": 85,
+      "fn": 43,
+      "dice": 0.09859154929577464,
+      "iou": 0.05185185185185185,
+      "precision": 0.07608695652173914,
+      "sensitivity": 0.14,
+      "f1": 0.09859154929577466
+     },
+     {
+      "exam_id": "SYN-0043-T1",
+      "tp": 159,
+      "fp": 95,
+      "fn": 166,
+      "dice": 0.5492227979274611,
+      "iou": 0.37857142857142856,
+      "precision": 0.6259842519685039,
+      "sensitivity": 0.48923076923076925,
+      "f1": 0.5492227979274612
+     },
+     {
+      "exam_id": "SYN-0043-T2",
+      "tp": 192,
+      "fp": 26,
+      "fn": 75,
+      "dice": 0.7917525773195876,
+      "iou": 0.6552901023890785,
+      "precision": 0.8807339449541285,
+      "sensitivity": 0.7191011235955056,
+      "f1": 0.7917525773195877
+     },
+     {
+      "exam_id": "SYN-0046-T1",
+      "tp": 51,
+      "fp": 17,
+      "fn": 81,
+      "dice": 0.51,
+      "iou": 0.3422818791946309,
+      "precision": 0.75,
+      "sensitivity": 0.38636363636363635,
+      "f1": 0.5100000000000001
+     },
+     {
+      "exam_id": "SYN-0046-T2",
+      "tp": 125,
+      "fp": 22,
+      "fn": 146,
+      "dice": 0.5980861244019139,
+      "iou": 0.42662116040955633,
+      "precision": 0.8503401360544217,
+      "sensitivity": 0.4612546125461255,
+      "f1": 0.5980861244019139
+     }
+    ]
+   },
+   "lesion_detection_iou": {
+    "iou_threshold": 0.1,
+    "hit_criterion": "iou",
+    "tp": 15,
+    "fp": 0,
+    "fn": 5,
+    "n_reference_lesions": 20,
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571428571428571,
+    "mean_iou_matched": 0.5954348151297556,
+    "average_precision": 0.75
+   },
+   "lesion_detection_centroid": {
+    "iou_threshold": 0.0,
+    "hit_criterion": "centroid",
+    "tp": 15,
+    "fp": 0,
+    "fn": 5,
+    "n_reference_lesions": 20,
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571428571428571,
+    "mean_iou_matched": 0.5954348151297556,
+    "average_precision": 0.75
+   },
+   "false_positives_per_exam": 0.0,
+   "runtime_s_per_exam": 0.10760416666666668
+  },
+  "glow": {
+   "detector": "glow",
+   "threshold": 2.0,
+   "threshold_selected_on": "validation",
+   "n_test_exams": 20,
+   "candidate_rule": {
+    "min_volume_mm3": 600.0,
+    "min_peak_score": 2.5,
+    "selected_on": "validation lesion-level F1"
+   },
+   "n_test_abnormal_exams": 13,
+   "voxel_level": {
+    "unit": "lung voxels (all lesion voxels + <=15k random lung voxels per exam)",
+    "auroc": 0.9256090295155599,
+    "average_precision": 0.07167128552904825,
+    "n_voxels": 303117,
+    "positive_fraction": 0.01028315798849949
+   },
+   "exam_level": {
+    "unit": "examination (volume score = mean of top 0.1% voxel scores)",
+    "auroc": 0.6153846153846154,
+    "average_precision": 0.7878121878121878
+   },
+   "segmentation": {
+    "unit": "per abnormal exam, voxel-level at val threshold; patient-level bootstrap CI",
+    "dice_mean": 0.022536063408216477,
+    "dice_median": 0.02148461074230537,
+    "dice_ci": {
+     "point": 0.022536063408216477,
+     "ci95": [
+      0.018035949393303507,
+      0.026684368375224872
+     ]
+    },
+    "iou_mean": 0.011421881817840006,
+    "sensitivity_mean": 0.39437131034775036,
+    "precision_mean": 0.011709709400373587,
+    "per_exam": [
+     {
+      "exam_id": "SYN-0016-T1",
+      "tp": 87,
+      "fp": 6290,
+      "fn": 148,
+      "dice": 0.02631578947368421,
+      "iou": 0.013333333333333334,
+      "precision": 0.013642778736082798,
+      "sensitivity": 0.3702127659574468,
+      "f1": 0.026315789473684213
+     },
+     {
+      "exam_id": "SYN-0016-T2",
+      "tp": 54,
+      "fp": 5615,
+      "fn": 217,
+      "dice": 0.01818181818181818,
+      "iou": 0.009174311926605505,
+      "precision": 0.009525489504321749,
+      "sensitivity": 0.1992619926199262,
+      "f1": 0.01818181818181818
+     },
+     {
+      "exam_id": "SYN-0020-T1",
+      "tp": 47,
+      "fp": 6985,
+      "fn": 38,
+      "dice": 0.013207812280455249,
+      "iou": 0.006647807637906648,
+      "precision": 0.006683731513083049,
+      "sensitivity": 0.5529411764705883,
+      "f1": 0.013207812280455249
+     },
+     {
+      "exam_id": "SYN-0020-T2",
+      "tp": 159,
+      "fp": 5603,
+      "fn": 237,
+      "dice": 0.05164014290354011,
+      "iou": 0.026504417402900483,
+      "precision": 0.027594585213467547,
+      "sensitivity": 0.4015151515151515,
+      "f1": 0.05164014290354011
+     },
+     {
+      "exam_id": "SYN-0032-T1",
+      "tp": 82,
+      "fp": 6505,
+      "fn": 237,
+      "dice": 0.02374746597161888,
+      "iou": 0.01201641266119578,
+      "precision": 0.012448762714437529,
+      "sensitivity": 0.25705329153605017,
+      "f1": 0.02374746597161888
+     },
+     {
+      "exam_id": "SYN-0032-T2",
+      "tp": 112,
+      "fp": 9510,
+      "fn": 141,
+      "dice": 0.02268354430379747,
+      "iou": 0.011471883642323056,
+      "precision": 0.011639991685720224,
+      "sensitivity": 0.4426877470355731,
+      "f1": 0.02268354430379747
+     },
+     {
+      "exam_id": "SYN-0040-T1",
+      "tp": 52,
+      "fp": 7250,
+      "fn": 243,
+      "dice": 0.013689614321442676,
+      "iou": 0.006891981444665341,
+      "precision": 0.007121336620104081,
+      "sensitivity": 0.17627118644067796,
+      "f1": 0.013689614321442674
+     },
+     {
+      "exam_id": "SYN-0041-T1",
+      "tp": 78,
+      "fp": 7346,
+      "fn": 140,
+      "dice": 0.020413504318241297,
+      "iou": 0.010312004230565839,
+      "precision": 0.01050646551724138,
+      "sensitivity": 0.3577981651376147,
+      "f1": 0.020413504318241297
+     },
+     {
+      "exam_id": "SYN-0041-T2",
+      "tp": 31,
+      "fp": 6867,
+      "fn": 19,
+      "dice": 0.008923431203223949,
+      "iou": 0.004481711724736158,
+      "precision": 0.004494056248187881,
+      "sensitivity": 0.62,
+      "f1": 0.008923431203223949
+     },
+     {
+      "exam_id": "SYN-0043-T1",
+      "tp": 109,
+      "fp": 7813,
+      "fn": 216,
+      "dice": 0.026433854735055173,
+      "iou": 0.01339395428852298,
+      "precision": 0.013759151729361272,
+      "sensitivity": 0.3353846153846154,
+      "f1": 0.026433854735055173
+     },
+     {
+      "exam_id": "SYN-0043-T2",
+      "tp": 93,
+      "fp": 6861,
+      "fn": 174,
+      "dice": 0.02575820523473203,
+      "iou": 0.013047138047138047,
+      "precision": 0.013373597929249352,
+      "sensitivity": 0.34831460674157305,
+      "f1": 0.025758205234732028
+     },
+     {
+      "exam_id": "SYN-0046-T1",
+      "tp": 89,
+      "fp": 8064,
+      "fn": 43,
+      "dice": 0.02148461074230537,
+      "iou": 0.010858955588091752,
+      "precision": 0.010916227155648228,
+      "sensitivity": 0.6742424242424242,
+      "f1": 0.02148461074230537
+     },
+     {
+      "exam_id": "SYN-0046-T2",
+      "tp": 106,
+      "fp": 9970,
+      "fn": 165,
+      "dice": 0.020489030636899584,
+      "iou": 0.010350551703935163,
+      "precision": 0.010520047637951568,
+      "sensitivity": 0.39114391143911437,
+      "f1": 0.020489030636899587
+     }
+    ]
+   },
+   "lesion_detection_iou": {
+    "iou_threshold": 0.1,
+    "hit_criterion": "iou",
+    "tp": 14,
+    "fp": 165,
+    "fn": 6,
+    "n_reference_lesions": 20,
+    "precision": 0.0782122905027933,
+    "recall": 0.7,
+    "f1": 0.1407035175879397,
+    "mean_iou_matched": 0.3030754813776532,
+    "average_precision": 0.057309941520467825
+   },
+   "lesion_detection_centroid": {
+    "iou_threshold": 0.0,
+    "hit_criterion": "centroid",
+    "tp": 14,
+    "fp": 165,
+    "fn": 6,
+    "n_reference_lesions": 20,
+    "precision": 0.0782122905027933,
+    "recall": 0.7,
+    "f1": 0.1407035175879397,
+    "mean_iou_matched": 0.29122485852509833,
+    "average_precision": 0.057309941520467825
+   },
+   "false_positives_per_exam": 6.428571428571429,
+   "runtime_s_per_exam": 19.144473684210524
+  },
+  "feature_glow": {
+   "detector": "feature_glow",
+   "threshold": 4.5,
+   "threshold_selected_on": "validation",
+   "n_test_exams": 20,
+   "candidate_rule": {
+    "min_volume_mm3": 1600.0,
+    "min_peak_score": 4.5,
+    "selected_on": "validation lesion-level F1"
+   },
+   "n_test_abnormal_exams": 13,
+   "voxel_level": {
+    "unit": "lung voxels (all lesion voxels + <=15k random lung voxels per exam)",
+    "auroc": 0.9987127617367126,
+    "average_precision": 0.8946558219318117,
+    "n_voxels": 303117,
+    "positive_fraction": 0.01028315798849949
+   },
+   "exam_level": {
+    "unit": "examination (volume score = mean of top 0.1% voxel scores)",
+    "auroc": 0.8901098901098901,
+    "average_precision": 0.9560080442433381
+   },
+   "segmentation": {
+    "unit": "per abnormal exam, voxel-level at val threshold; patient-level bootstrap CI",
+    "dice_mean": 0.5340707563960447,
+    "dice_median": 0.6097560975609756,
+    "dice_ci": {
+     "point": 0.5340707563960447,
+     "ci95": [
+      0.43219659045695025,
+      0.6161513827897097
+     ]
+    },
+    "iou_mean": 0.3800169415898322,
+    "sensitivity_mean": 0.5832924897393277,
+    "precision_mean": 0.5377304013050919,
+    "per_exam": [
+     {
+      "exam_id": "SYN-0016-T1",
+      "tp": 200,
+      "fp": 157,
+      "fn": 35,
+      "dice": 0.6756756756756757,
+      "iou": 0.5102040816326531,
+      "precision": 0.5602240896358543,
+      "sensitivity": 0.851063829787234,
+      "f1": 0.6756756756756755
+     },
+     {
+      "exam_id": "SYN-0016-T2",
+      "tp": 171,
+      "fp": 80,
+      "fn": 100,
+      "dice": 0.6551724137931034,
+      "iou": 0.48717948717948717,
+      "precision": 0.6812749003984063,
+      "sensitivity": 0.6309963099630996,
+      "f1": 0.6551724137931034
+     },
+     {
+      "exam_id": "SYN-0020-T1",
+      "tp": 20,
+      "fp": 12,
+      "fn": 65,
+      "dice": 0.3418803418803419,
+      "iou": 0.20618556701030927,
+      "precision": 0.625,
+      "sensitivity": 0.23529411764705882,
+      "f1": 0.3418803418803419
+     },
+     {
+      "exam_id": "SYN-0020-T2",
+      "tp": 240,
+      "fp": 65,
+      "fn": 156,
+      "dice": 0.6847360912981455,
+      "iou": 0.5206073752711496,
+      "precision": 0.7868852459016393,
+      "sensitivity": 0.6060606060606061,
+      "f1": 0.6847360912981456
+     },
+     {
+      "exam_id": "SYN-0032-T1",
+      "tp": 275,
+      "fp": 308,
+      "fn": 44,
+      "dice": 0.6097560975609756,
+      "iou": 0.43859649122807015,
+      "precision": 0.4716981132075472,
+      "sensitivity": 0.8620689655172413,
+      "f1": 0.6097560975609757
+     },
+     {
+      "exam_id": "SYN-0032-T2",
+      "tp": 179,
+      "fp": 200,
+      "fn": 74,
+      "dice": 0.5664556962025317,
+      "iou": 0.39514348785871967,
+      "precision": 0.47229551451187335,
+      "sensitivity": 0.7075098814229249,
+      "f1": 0.5664556962025317
+     },
+     {
+      "exam_id": "SYN-0040-T1",
+      "tp": 197,
+      "fp": 86,
+      "fn": 98,
+      "dice": 0.6816608996539792,
+      "iou": 0.5170603674540682,
+      "precision": 0.696113074204947,
+      "sensitivity": 0.6677966101694915,
+      "f1": 0.6816608996539792
+     },
+     {
+      "exam_id": "SYN-0041-T1",
+      "tp": 99,
+      "fp": 93,
+      "fn": 119,
+      "dice": 0.48292682926829267,
+      "iou": 0.3183279742765273,
+      "precision": 0.515625,
+      "sensitivity": 0.4541284403669725,
+      "f1": 0.48292682926829267
+     },
+     {
+      "exam_id": "SYN-0041-T2",
+      "tp": 2,
+      "fp": 18,
+      "fn": 48,
+      "dice": 0.05714285714285714,
+      "iou": 0.029411764705882353,
+      "precision": 0.1,
+      "sensitivity": 0.04,
+      "f1": 0.05714285714285714
+     },
+     {
+      "exam_id": "SYN-0043-T1",
+      "tp": 173,
+      "fp": 252,
+      "fn": 152,
+      "dice": 0.4613333333333333,
+      "iou": 0.29982668977469673,
+      "precision": 0.40705882352941175,
+      "sensitivity": 0.5323076923076923,
+      "f1": 0.46133333333333326
+     },
+     {
+      "exam_id": "SYN-0043-T2",
+      "tp": 234,
+      "fp": 262,
+      "fn": 33,
+      "dice": 0.6133682830930537,
+      "iou": 0.44234404536862004,
+      "precision": 0.4717741935483871,
+      "sensitivity": 0.8764044943820225,
+      "f1": 0.6133682830930537
+     },
+     {
+      "exam_id": "SYN-0046-T1",
+      "tp": 81,
+      "fp": 112,
+      "fn": 51,
+      "dice": 0.49846153846153846,
+      "iou": 0.3319672131147541,
+      "precision": 0.41968911917098445,
+      "sensitivity": 0.6136363636363636,
+      "f1": 0.4984615384615384
+     },
+     {
+      "exam_id": "SYN-0046-T2",
+      "tp": 137,
+      "fp": 38,
+      "fn": 134,
+      "dice": 0.6143497757847534,
+      "iou": 0.44336569579288027,
+      "precision": 0.7828571428571428,
+      "sensitivity": 0.5055350553505535,
+      "f1": 0.6143497757847532
+     }
+    ]
+   },
+   "lesion_detection_iou": {
+    "iou_threshold": 0.1,
+    "hit_criterion": "iou",
+    "tp": 11,
+    "fp": 3,
+    "fn": 9,
+    "n_reference_lesions": 20,
+    "precision": 0.7857142857142857,
+    "recall": 0.55,
+    "f1": 0.6470588235294117,
+    "mean_iou_matched": 0.6028185266116011,
+    "average_precision": 0.4321428571428571
+   },
+   "lesion_detection_centroid": {
+    "iou_threshold": 0.0,
+    "hit_criterion": "centroid",
+    "tp": 11,
+    "fp": 3,
+    "fn": 9,
+    "n_reference_lesions": 20,
+    "precision": 0.7857142857142857,
+    "recall": 0.55,
+    "f1": 0.6470588235294117,
+    "mean_iou_matched": 0.6028185266116011,
+    "average_precision": 0.4321428571428571
+   },
+   "false_positives_per_exam": 0.0,
+   "runtime_s_per_exam": 103.0828
+  },
+  "contextflow": {
+   "detector": "contextflow",
+   "threshold": 4.0,
+   "threshold_selected_on": "validation",
+   "n_test_exams": 20,
+   "candidate_rule": {
+    "min_volume_mm3": 1600.0,
+    "min_peak_score": 4.0,
+    "selected_on": "validation lesion-level F1"
+   },
+   "n_test_abnormal_exams": 13,
+   "voxel_level": {
+    "unit": "lung voxels (all lesion voxels + <=15k random lung voxels per exam)",
+    "auroc": 0.9986398834349268,
+    "average_precision": 0.9000503263830625,
+    "n_voxels": 303117,
+    "positive_fraction": 0.01028315798849949
+   },
+   "exam_level": {
+    "unit": "examination (volume score = mean of top 0.1% voxel scores)",
+    "auroc": 0.8461538461538461,
+    "average_precision": 0.931353211896198
+   },
+   "segmentation": {
+    "unit": "per abnormal exam, voxel-level at val threshold; patient-level bootstrap CI",
+    "dice_mean": 0.5517947673074262,
+    "dice_median": 0.5989847715736041,
+    "dice_ci": {
+     "point": 0.5517947673074262,
+     "ci95": [
+      0.4625816375802159,
+      0.6387184834307361
+     ]
+    },
+    "iou_mean": 0.395441967560792,
+    "sensitivity_mean": 0.5769676940625822,
+    "precision_mean": 0.6059558195891191,
+    "per_exam": [
+     {
+      "exam_id": "SYN-0016-T1",
+      "tp": 186,
+      "fp": 93,
+      "fn": 49,
+      "dice": 0.7237354085603113,
+      "iou": 0.5670731707317073,
+      "precision": 0.6666666666666666,
+      "sensitivity": 0.7914893617021277,
+      "f1": 0.7237354085603113
+     },
+     {
+      "exam_id": "SYN-0016-T2",
+      "tp": 188,
+      "fp": 93,
+      "fn": 83,
+      "dice": 0.6811594202898551,
+      "iou": 0.5164835164835165,
+      "precision": 0.6690391459074733,
+      "sensitivity": 0.6937269372693727,
+      "f1": 0.6811594202898551
+     },
+     {
+      "exam_id": "SYN-0020-T1",
+      "tp": 15,
+      "fp": 3,
+      "fn": 70,
+      "dice": 0.2912621359223301,
+      "iou": 0.17045454545454544,
+      "precision": 0.8333333333333334,
+      "sensitivity": 0.17647058823529413,
+      "f1": 0.29126213592233013
+     },
+     {
+      "exam_id": "SYN-0020-T2",
+      "tp": 205,
+      "fp": 31,
+      "fn": 191,
+      "dice": 0.6487341772151899,
+      "iou": 0.48009367681498827,
+      "precision": 0.8686440677966102,
+      "sensitivity": 0.5176767676767676,
+      "f1": 0.6487341772151899
+     },
+     {
+      "exam_id": "SYN-0032-T1",
+      "tp": 284,
+      "fp": 276,
+      "fn": 35,
+      "dice": 0.646188850967008,
+      "iou": 0.4773109243697479,
+      "precision": 0.5071428571428571,
+      "sensitivity": 0.890282131661442,
+      "f1": 0.646188850967008
+     },
+     {
+      "exam_id": "SYN-0032-T2",
+      "tp": 165,
+      "fp": 125,
+      "fn": 88,
+      "dice": 0.6077348066298343,
+      "iou": 0.4365079365079365,
+      "precision": 0.5689655172413793,
+      "sensitivity": 0.6521739130434783,
+      "f1": 0.6077348066298344
+     },
+     {
+      "exam_id": "SYN-0040-T1",
+      "tp": 211,
+      "fp": 87,
+      "fn": 84,
+      "dice": 0.7116357504215851,
+      "iou": 0.5523560209424084,
+      "precision": 0.7080536912751678,
+      "sensitivity": 0.7152542372881356,
+      "f1": 0.7116357504215852
+     },
+     {
+      "exam_id": "SYN-0041-T1",
+      "tp": 109,
+      "fp": 104,
+      "fn": 109,
+      "dice": 0.505800464037123,
+      "iou": 0.3385093167701863,
+      "precision": 0.5117370892018779,
+      "sensitivity": 0.5,
+      "f1": 0.5058004640371229
+     },
+     {
+      "exam_id": "SYN-0041-T2",
+      "tp": 6,
+      "fp": 13,
+      "fn": 44,
+      "dice": 0.17391304347826086,
+      "iou": 0.09523809523809523,
+      "precision": 0.3157894736842105,
+      "sensitivity": 0.12,
+      "f1": 0.17391304347826086
+     },
+     {
+      "exam_id": "SYN-0043-T1",
+      "tp": 198,
+      "fp": 289,
+      "fn": 127,
+      "dice": 0.4876847290640394,
+      "iou": 0.32247557003257327,
+      "precision": 0.406570841889117,
+      "sensitivity": 0.6092307692307692,
+      "f1": 0.4876847290640394
+     },
+     {
+      "exam_id": "SYN-0043-T2",
+      "tp": 236,
+      "fp": 285,
+      "fn": 31,
+      "dice": 0.5989847715736041,
+      "iou": 0.427536231884058,
+      "precision": 0.45297504798464494,
+      "sensitivity": 0.8838951310861424,
+      "f1": 0.5989847715736041
+     },
+     {
+      "exam_id": "SYN-0046-T1",
+      "tp": 67,
+      "fp": 61,
+      "fn": 65,
+      "dice": 0.5153846153846153,
+      "iou": 0.3471502590673575,
+      "precision": 0.5234375,
+      "sensitivity": 0.5075757575757576,
+      "f1": 0.5153846153846154
+     },
+     {
+      "exam_id": "SYN-0046-T2",
+      "tp": 120,
+      "fp": 22,
+      "fn": 151,
+      "dice": 0.5811138014527845,
+      "iou": 0.40955631399317405,
+      "precision": 0.8450704225352113,
+      "sensitivity": 0.44280442804428044,
+      "f1": 0.5811138014527846
+     }
+    ]
+   },
+   "lesion_detection_iou": {
+    "iou_threshold": 0.1,
+    "hit_criterion": "iou",
+    "tp": 10,
+    "fp": 2,
+    "fn": 10,
+    "n_reference_lesions": 20,
+    "precision": 0.8333333333333334,
+    "recall": 0.5,
+    "f1": 0.625,
+    "mean_iou_matched": 0.6134033885698386,
+    "average_precision": 0.41666666666666663
+   },
+   "lesion_detection_centroid": {
+    "iou_threshold": 0.0,
+    "hit_criterion": "centroid",
+    "tp": 10,
+    "fp": 2,
+    "fn": 10,
+    "n_reference_lesions": 20,
+    "precision": 0.8333333333333334,
+    "recall": 0.5,
+    "f1": 0.625,
+    "mean_iou_matched": 0.6134033885698386,
+    "average_precision": 0.41666666666666663
+   },
+   "false_positives_per_exam": 0.0,
+   "runtime_s_per_exam": 44.158854166666664
+  }
+ },
+ "registration": {
+  "n_pairs": 10,
+  "failure_rate": 0.0,
+  "lung_dice_before": 0.8902522064321307,
+  "lung_dice_after": 0.9709657061023617,
+  "ncc_before": 0.3063989937988446,
+  "ncc_after": 0.8518017224565227,
+  "tre_mm_mean": 0.0899857003012962,
+  "tre_mm_median": 0.08845768666993495,
+  "displacement_without_registration_mm_mean": 7.480564850991553,
+  "n_landmarks": 12,
+  "unit": "synthetic lesion-centre landmarks (pair level)"
+ },
+ "temporal": {
+  "intensity_baseline|registered|combined": {
+   "detector": "intensity_baseline",
+   "registration": true,
+   "matching_mode": "combined",
+   "n_pairs": 10,
+   "n_reference_lesions": 12,
+   "n_associated": 11,
+   "change_category": {
+    "n": 12,
+    "accuracy": 0.5833333333333334,
+    "confusion_ref_rows_pred_cols": {
+     "decreased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 2,
+      "stable": 0
+     },
+     "increased": {
+      "decreased": 0,
+      "increased": 2,
+      "new": 1,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "new": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 1,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "none": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "resolved": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 3,
+      "stable": 0
+     },
+     "stable": {
+      "decreased": 0,
+      "increased": 1,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 1
+     }
+    }
+   },
+   "change_category_as_reported": {
+    "n": 12,
+    "accuracy": 0.5833333333333334,
+    "confusion_ref_rows_pred_cols": {
+     "decreased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 2,
+      "stable": 0
+     },
+     "increased": {
+      "decreased": 0,
+      "increased": 2,
+      "new": 1,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "new": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 1,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "none": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "resolved": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 3,
+      "stable": 0
+     },
+     "stable": {
+      "decreased": 0,
+      "increased": 1,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 1
+     }
+    }
+   },
+   "association_accuracy": 0.6666666666666666,
+   "volume_later_errors_mm3": {
+    "n": 4,
+    "mae": 1402.34375,
+    "rmse": 1447.7175934790425,
+    "mape": 35.75255832692857,
+    "mape_excluded": 0
+   },
+   "volume_earlier_errors_mm3": {
+    "n": 4,
+    "mae": 1140.625,
+    "rmse": 1158.7283405473001,
+    "mape": 50.00204153527251,
+    "mape_excluded": 0
+   },
+   "volume_change_errors_mm3": {
+    "n": 4,
+    "mae": 527.34375,
+    "rmse": 616.6928397458089
+   },
+   "percent_change_errors": {
+    "n": 4,
+    "mae_percentage_points": 134.02756477133667,
+    "median_abs_error_percentage_points": 38.43655253866262
+   },
+   "rows": [
+    {
+     "patient_id": "SYN-0008",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0016",
+     "lesion_id": "SYN-0016-L1",
+     "ref_change": "stable",
+     "pred_change": "stable",
+     "pred_change_reported": "stable",
+     "registration_reliable": true,
+     "ref_v1": 3671.875,
+     "ref_v2": 4234.375,
+     "pred_v1": 2640.625,
+     "pred_v2": 2593.75,
+     "associated": true,
+     "association_distance_mm": 0.08921488061720127,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": 15.319148936170212,
+     "pred_pct": -1.7751479289940828
+    },
+    {
+     "patient_id": "SYN-0016",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0017",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0020",
+     "lesion_id": "SYN-0020-L1",
+     "ref_change": "new",
+     "pred_change": "new",
+     "pred_change_reported": "new",
+     "registration_reliable": true,
+     "ref_v1": 0.0,
+     "ref_v2": 2875.0,
+     "pred_v1": 0.0,
+     "pred_v2": 1109.375,
+     "associated": true,
+     "association_distance_mm": 0.24800338003951217,
+     "match_status": "potentially_new",
+     "association_correct": true,
+     "ref_pct": null,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0020",
+     "lesion_id": "SYN-0020-L2",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "new",
+     "registration_reliable": true,
+     "ref_v1": 1328.125,
+     "ref_v2": 3312.5,
+     "pred_v1": 0.0,
+     "pred_v2": 1859.375,
+     "associated": true,
+     "association_distance_mm": 0.13669805142022187,
+     "match_status": "potentially_new",
+     "association_correct": false,
+     "ref_pct": 149.41176470588235,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0020",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 2,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0023",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0032",
+     "lesion_id": "SYN-0032-L1",
+     "ref_change": "stable",
+     "pred_change": "increased",
+     "pred_change_reported": "increased",
+     "registration_reliable": true,
+     "ref_v1": 3609.375,
+     "ref_v2": 3500.0,
+     "pred_v1": 2171.875,
+     "pred_v2": 2515.625,
+     "associated": true,
+     "association_distance_mm": 0.1318141198586455,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": -3.0303030303030303,
+     "pred_pct": 15.827338129496402
+    },
+    {
+     "patient_id": "SYN-0032",
+     "lesion_id": "SYN-0032-L2",
+     "ref_change": "decreased",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 1375.0,
+     "ref_v2": 453.125,
+     "pred_v1": 796.875,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 0.3621824186177521,
+     "match_status": "potentially_resolved",
+     "association_correct": false,
+     "ref_pct": -67.04545454545455,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0032",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 0,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0040",
+     "lesion_id": "SYN-0040-L1",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 4609.375,
+     "ref_v2": 0.0,
+     "pred_v1": 3078.125,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 0.156760283732601,
+     "match_status": "potentially_resolved",
+     "association_correct": true,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0040",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0041",
+     "lesion_id": "SYN-0041-L1",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 2046.875,
+     "ref_v2": 0.0,
+     "pred_v1": 671.875,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 0.23443224366463108,
+     "match_status": "potentially_resolved",
+     "association_correct": true,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0041",
+     "lesion_id": "SYN-0041-L2",
+     "ref_change": "decreased",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 1359.375,
+     "ref_v2": 781.25,
+     "pred_v1": 625.0,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 0.32205482836841953,
+     "match_status": "potentially_resolved",
+     "association_correct": false,
+     "ref_pct": -42.5287356321839,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0041",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 2,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0043",
+     "lesion_id": "SYN-0043-L1",
+     "ref_change": "increased",
+     "pred_change": "increased",
+     "pred_change_reported": "increased",
+     "registration_reliable": true,
+     "ref_v1": 1640.625,
+     "ref_v2": 4171.875,
+     "pred_v1": 437.5,
+     "pred_v2": 3046.875,
+     "associated": true,
+     "association_distance_mm": 0.5092446294231441,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": 154.2857142857143,
+     "pred_pct": 596.4285714285714
+    },
+    {
+     "patient_id": "SYN-0043",
+     "lesion_id": "SYN-0043-L2",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 3437.5,
+     "ref_v2": 0.0,
+     "pred_v1": 1750.0,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 0.24783068693925195,
+     "match_status": "potentially_resolved",
+     "association_correct": true,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0043",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 0,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0046",
+     "lesion_id": "SYN-0046-L1",
+     "ref_change": "increased",
+     "pred_change": "increased",
+     "pred_change_reported": "increased",
+     "registration_reliable": true,
+     "ref_v1": 1515.625,
+     "ref_v2": 3781.25,
+     "pred_v1": 625.0,
+     "pred_v2": 1921.875,
+     "associated": true,
+     "association_distance_mm": 0.17636451989235616,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": 149.48453608247422,
+     "pred_pct": 207.50000000000003
+    },
+    {
+     "patient_id": "SYN-0046",
+     "lesion_id": "SYN-0046-L2",
+     "ref_change": "stable",
+     "pred_change": "none",
+     "pred_change_reported": "none",
+     "registration_reliable": true,
+     "ref_v1": 546.875,
+     "ref_v2": 453.125,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 138.77988536882702,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -17.142857142857142,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0046",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    }
+   ]
+  },
+  "glow|registered|combined": {
+   "detector": "glow",
+   "registration": true,
+   "matching_mode": "combined",
+   "n_pairs": 10,
+   "n_reference_lesions": 12,
+   "n_associated": 12,
+   "change_category": {
+    "n": 12,
+    "accuracy": 0.3333333333333333,
+    "confusion_ref_rows_pred_cols": {
+     "decreased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "resolved": 2,
+      "stable": 0
+     },
+     "increased": {
+      "decreased": 1,
+      "increased": 0,
+      "new": 0,
+      "resolved": 0,
+      "stable": 2
+     },
+     "new": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "resolved": 0,
+      "stable": 1
+     },
+     "resolved": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "resolved": 3,
+      "stable": 0
+     },
+     "stable": {
+      "decreased": 1,
+      "increased": 1,
+      "new": 0,
+      "resolved": 0,
+      "stable": 1
+     }
+    }
+   },
+   "change_category_as_reported": {
+    "n": 12,
+    "accuracy": 0.3333333333333333,
+    "confusion_ref_rows_pred_cols": {
+     "decreased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "resolved": 2,
+      "stable": 0
+     },
+     "increased": {
+      "decreased": 1,
+      "increased": 0,
+      "new": 0,
+      "resolved": 0,
+      "stable": 2
+     },
+     "new": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "resolved": 0,
+      "stable": 1
+     },
+     "resolved": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "resolved": 3,
+      "stable": 0
+     },
+     "stable": {
+      "decreased": 1,
+      "increased": 1,
+      "new": 0,
+      "resolved": 0,
+      "stable": 1
+     }
+    }
+   },
+   "association_accuracy": 0.75,
+   "volume_later_errors_mm3": {
+    "n": 6,
+    "mae": 5747.395833333333,
+    "rmse": 11021.886149105976,
+    "mape": 164.0607163975521,
+    "mape_excluded": 0
+   },
+   "volume_earlier_errors_mm3": {
+    "n": 6,
+    "mae": 5414.0625,
+    "rmse": 11268.42566608963,
+    "mape": 340.0838671626899,
+    "mape_excluded": 0
+   },
+   "volume_change_errors_mm3": {
+    "n": 6,
+    "mae": 1348.9583333333333,
+    "rmse": 1554.6940431185596
+   },
+   "percent_change_errors": {
+    "n": 6,
+    "mae_percentage_points": 99.15264714812135,
+    "median_abs_error_percentage_points": 106.65586158339781
+   },
+   "rows": [
+    {
+     "patient_id": "SYN-0008",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 2,
+      "n_new": 3,
+      "n_resolved": 2,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0016",
+     "lesion_id": "SYN-0016-L1",
+     "ref_change": "stable",
+     "pred_change": "stable",
+     "pred_change_reported": "stable",
+     "registration_reliable": true,
+     "ref_v1": 3671.875,
+     "ref_v2": 4234.375,
+     "pred_v1": 2890.625,
+     "pred_v2": 2468.75,
+     "associated": true,
+     "association_distance_mm": 9.55675373397646,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": 15.319148936170212,
+     "pred_pct": -14.594594594594595
+    },
+    {
+     "patient_id": "SYN-0016",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 9,
+      "n_new": 1,
+      "n_resolved": 5,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0017",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 6,
+      "n_new": 1,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0020",
+     "lesion_id": "SYN-0020-L1",
+     "ref_change": "new",
+     "pred_change": "stable",
+     "pred_change_reported": "stable",
+     "registration_reliable": true,
+     "ref_v1": 0.0,
+     "ref_v2": 2875.0,
+     "pred_v1": 37421.875,
+     "pred_v2": 40203.125,
+     "associated": true,
+     "association_distance_mm": 12.814784230924296,
+     "match_status": "matched",
+     "association_correct": false,
+     "ref_pct": null,
+     "pred_pct": 7.432150313152401
+    },
+    {
+     "patient_id": "SYN-0020",
+     "lesion_id": "SYN-0020-L2",
+     "ref_change": "increased",
+     "pred_change": "decreased",
+     "pred_change_reported": "decreased",
+     "registration_reliable": true,
+     "ref_v1": 1328.125,
+     "ref_v2": 3312.5,
+     "pred_v1": 1734.375,
+     "pred_v2": 1312.5,
+     "associated": true,
+     "association_distance_mm": 1.4709705439506628,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": 149.41176470588235,
+     "pred_pct": -24.324324324324326
+    },
+    {
+     "patient_id": "SYN-0020",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 4,
+      "n_new": 6,
+      "n_resolved": 2,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0023",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 6,
+      "n_new": 1,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0032",
+     "lesion_id": "SYN-0032-L1",
+     "ref_change": "stable",
+     "pred_change": "increased",
+     "pred_change_reported": "increased",
+     "registration_reliable": true,
+     "ref_v1": 3609.375,
+     "ref_v2": 3500.0,
+     "pred_v1": 1406.25,
+     "pred_v2": 2281.25,
+     "associated": true,
+     "association_distance_mm": 8.173568994243666,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": -3.0303030303030303,
+     "pred_pct": 62.22222222222222
+    },
+    {
+     "patient_id": "SYN-0032",
+     "lesion_id": "SYN-0032-L2",
+     "ref_change": "decreased",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 1375.0,
+     "ref_v2": 453.125,
+     "pred_v1": 2656.25,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 1.032082252535696,
+     "match_status": "potentially_resolved",
+     "association_correct": false,
+     "ref_pct": -67.04545454545455,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0032",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 8,
+      "n_new": 12,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0040",
+     "lesion_id": "SYN-0040-L1",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 4609.375,
+     "ref_v2": 0.0,
+     "pred_v1": 1109.375,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 11.28440380814268,
+     "match_status": "potentially_resolved",
+     "association_correct": true,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0040",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 4,
+      "n_new": 2,
+      "n_resolved": 3,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0041",
+     "lesion_id": "SYN-0041-L1",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 2046.875,
+     "ref_v2": 0.0,
+     "pred_v1": 1968.75,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 7.698108469842412,
+     "match_status": "potentially_resolved",
+     "association_correct": true,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0041",
+     "lesion_id": "SYN-0041-L2",
+     "ref_change": "decreased",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 1359.375,
+     "ref_v2": 781.25,
+     "pred_v1": 968.75,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 7.2191364253046775,
+     "match_status": "potentially_resolved",
+     "association_correct": false,
+     "ref_pct": -42.5287356321839,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0041",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 6,
+      "n_new": 0,
+      "n_resolved": 2,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0043",
+     "lesion_id": "SYN-0043-L1",
+     "ref_change": "increased",
+     "pred_change": "stable",
+     "pred_change_reported": "stable",
+     "registration_reliable": true,
+     "ref_v1": 1640.625,
+     "ref_v2": 4171.875,
+     "pred_v1": 29109.375,
+     "pred_v2": 30921.875,
+     "associated": true,
+     "association_distance_mm": 10.834422816480412,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": 154.2857142857143,
+     "pred_pct": 6.226516371443908
+    },
+    {
+     "patient_id": "SYN-0043",
+     "lesion_id": "SYN-0043-L2",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 3437.5,
+     "ref_v2": 0.0,
+     "pred_v1": 1000.0,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 7.688560569308544,
+     "match_status": "potentially_resolved",
+     "association_correct": true,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0043",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 7,
+      "n_new": 0,
+      "n_resolved": 3,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0046",
+     "lesion_id": "SYN-0046-L1",
+     "ref_change": "increased",
+     "pred_change": "stable",
+     "pred_change_reported": "stable",
+     "registration_reliable": true,
+     "ref_v1": 1515.625,
+     "ref_v2": 3781.25,
+     "pred_v1": 1890.625,
+     "pred_v2": 1718.75,
+     "associated": true,
+     "association_distance_mm": 1.990386170173286,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": 149.48453608247422,
+     "pred_pct": -9.090909090909092
+    },
+    {
+     "patient_id": "SYN-0046",
+     "lesion_id": "SYN-0046-L2",
+     "ref_change": "stable",
+     "pred_change": "decreased",
+     "pred_change_reported": "decreased",
+     "registration_reliable": true,
+     "ref_v1": 546.875,
+     "ref_v2": 453.125,
+     "pred_v1": 1796.875,
+     "pred_v2": 1140.625,
+     "associated": true,
+     "association_distance_mm": 1.3254362017869246,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": -17.142857142857142,
+     "pred_pct": -36.52173913043478
+    },
+    {
+     "patient_id": "SYN-0046",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 8,
+      "n_new": 1,
+      "n_resolved": 2,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    }
+   ]
+  },
+  "feature_glow|registered|combined": {
+   "detector": "feature_glow",
+   "registration": true,
+   "matching_mode": "combined",
+   "n_pairs": 10,
+   "n_reference_lesions": 12,
+   "n_associated": 9,
+   "change_category": {
+    "n": 12,
+    "accuracy": 0.3333333333333333,
+    "confusion_ref_rows_pred_cols": {
+     "decreased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 1,
+      "stable": 0
+     },
+     "increased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 3,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "new": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 1,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "none": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "resolved": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 2,
+      "stable": 0
+     },
+     "stable": {
+      "decreased": 1,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 1
+     }
+    }
+   },
+   "change_category_as_reported": {
+    "n": 12,
+    "accuracy": 0.3333333333333333,
+    "confusion_ref_rows_pred_cols": {
+     "decreased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 1,
+      "stable": 0
+     },
+     "increased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 3,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "new": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 1,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "none": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "resolved": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 2,
+      "stable": 0
+     },
+     "stable": {
+      "decreased": 1,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 1
+     }
+    }
+   },
+   "association_accuracy": 0.4166666666666667,
+   "volume_later_errors_mm3": {
+    "n": 2,
+    "mae": 578.125,
+    "rmse": 734.5412045964474,
+    "mape": 13.962836056931998,
+    "mape_excluded": 0
+   },
+   "volume_earlier_errors_mm3": {
+    "n": 2,
+    "mae": 335.9375,
+    "rmse": 336.0283307438526,
+    "mape": 9.229989868287742,
+    "mape_excluded": 0
+   },
+   "volume_change_errors_mm3": {
+    "n": 2,
+    "mae": 789.0625,
+    "rmse": 973.5892237296488
+   },
+   "percent_change_errors": {
+    "n": 2,
+    "mae_percentage_points": 20.25555808139209,
+    "median_abs_error_percentage_points": 20.25555808139209
+   },
+   "rows": [
+    {
+     "patient_id": "SYN-0008",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0016",
+     "lesion_id": "SYN-0016-L1",
+     "ref_change": "stable",
+     "pred_change": "decreased",
+     "pred_change_reported": "decreased",
+     "registration_reliable": true,
+     "ref_v1": 3671.875,
+     "ref_v2": 4234.375,
+     "pred_v1": 4000.0,
+     "pred_v2": 3203.125,
+     "associated": true,
+     "association_distance_mm": 0.6889086602479655,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": 15.319148936170212,
+     "pred_pct": -19.921875
+    },
+    {
+     "patient_id": "SYN-0016",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0017",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0020",
+     "lesion_id": "SYN-0020-L1",
+     "ref_change": "new",
+     "pred_change": "new",
+     "pred_change_reported": "new",
+     "registration_reliable": true,
+     "ref_v1": 0.0,
+     "ref_v2": 2875.0,
+     "pred_v1": 0.0,
+     "pred_v2": 1796.875,
+     "associated": true,
+     "association_distance_mm": 2.6816881537472863,
+     "match_status": "potentially_new",
+     "association_correct": true,
+     "ref_pct": null,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0020",
+     "lesion_id": "SYN-0020-L2",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "new",
+     "registration_reliable": true,
+     "ref_v1": 1328.125,
+     "ref_v2": 3312.5,
+     "pred_v1": 0.0,
+     "pred_v2": 2687.5,
+     "associated": true,
+     "association_distance_mm": 0.24798859075927715,
+     "match_status": "potentially_new",
+     "association_correct": false,
+     "ref_pct": 149.41176470588235,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0020",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 2,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0023",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0032",
+     "lesion_id": "SYN-0032-L1",
+     "ref_change": "stable",
+     "pred_change": "stable",
+     "pred_change_reported": "stable",
+     "registration_reliable": true,
+     "ref_v1": 3609.375,
+     "ref_v2": 3500.0,
+     "pred_v1": 3953.125,
+     "pred_v2": 3625.0,
+     "associated": true,
+     "association_distance_mm": 0.9301618130700199,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": -3.0303030303030303,
+     "pred_pct": -8.300395256916996
+    },
+    {
+     "patient_id": "SYN-0032",
+     "lesion_id": "SYN-0032-L2",
+     "ref_change": "decreased",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 1375.0,
+     "ref_v2": 453.125,
+     "pred_v1": 1703.125,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 1.7626510399758972,
+     "match_status": "potentially_resolved",
+     "association_correct": false,
+     "ref_pct": -67.04545454545455,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0032",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 1,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0040",
+     "lesion_id": "SYN-0040-L1",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 4609.375,
+     "ref_v2": 0.0,
+     "pred_v1": 3500.0,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 1.7319925135272054,
+     "match_status": "potentially_resolved",
+     "association_correct": true,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0040",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0041",
+     "lesion_id": "SYN-0041-L1",
+     "ref_change": "resolved",
+     "pred_change": "none",
+     "pred_change_reported": "none",
+     "registration_reliable": true,
+     "ref_v1": 2046.875,
+     "ref_v2": 0.0,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 1000000000.0,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -100.0,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0041",
+     "lesion_id": "SYN-0041-L2",
+     "ref_change": "decreased",
+     "pred_change": "none",
+     "pred_change_reported": "none",
+     "registration_reliable": true,
+     "ref_v1": 1359.375,
+     "ref_v2": 781.25,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 1000000000.0,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -42.5287356321839,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0041",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0043",
+     "lesion_id": "SYN-0043-L1",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "new",
+     "registration_reliable": true,
+     "ref_v1": 1640.625,
+     "ref_v2": 4171.875,
+     "pred_v1": 0.0,
+     "pred_v2": 5265.625,
+     "associated": true,
+     "association_distance_mm": 2.8954691585607226,
+     "match_status": "potentially_new",
+     "association_correct": false,
+     "ref_pct": 154.2857142857143,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0043",
+     "lesion_id": "SYN-0043-L2",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 3437.5,
+     "ref_v2": 0.0,
+     "pred_v1": 2015.625,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 0.45690143434761754,
+     "match_status": "potentially_resolved",
+     "association_correct": true,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0043",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 1,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0046",
+     "lesion_id": "SYN-0046-L1",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "new",
+     "registration_reliable": true,
+     "ref_v1": 1515.625,
+     "ref_v2": 3781.25,
+     "pred_v1": 0.0,
+     "pred_v2": 2515.625,
+     "associated": true,
+     "association_distance_mm": 0.5627634547185594,
+     "match_status": "potentially_new",
+     "association_correct": false,
+     "ref_pct": 149.48453608247422,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0046",
+     "lesion_id": "SYN-0046-L2",
+     "ref_change": "stable",
+     "pred_change": "none",
+     "pred_change_reported": "none",
+     "registration_reliable": true,
+     "ref_v1": 546.875,
+     "ref_v2": 453.125,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 138.8016217774714,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -17.142857142857142,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0046",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 1,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    }
+   ]
+  },
+  "contextflow|registered|combined": {
+   "detector": "contextflow",
+   "registration": true,
+   "matching_mode": "combined",
+   "n_pairs": 10,
+   "n_reference_lesions": 12,
+   "n_associated": 8,
+   "change_category": {
+    "n": 12,
+    "accuracy": 0.25,
+    "confusion_ref_rows_pred_cols": {
+     "decreased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 1,
+      "stable": 0
+     },
+     "increased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 3,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "new": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 0
+     },
+     "none": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "resolved": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 2,
+      "stable": 0
+     },
+     "stable": {
+      "decreased": 1,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 1
+     }
+    }
+   },
+   "change_category_as_reported": {
+    "n": 12,
+    "accuracy": 0.25,
+    "confusion_ref_rows_pred_cols": {
+     "decreased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 1,
+      "stable": 0
+     },
+     "increased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 3,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "new": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 0
+     },
+     "none": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "resolved": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 2,
+      "stable": 0
+     },
+     "stable": {
+      "decreased": 1,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 1
+     }
+    }
+   },
+   "association_accuracy": 0.3333333333333333,
+   "volume_later_errors_mm3": {
+    "n": 2,
+    "mae": 460.9375,
+    "rmse": 471.993983343538,
+    "mape": 11.775994992092778,
+    "mape_excluded": 0
+   },
+   "volume_earlier_errors_mm3": {
+    "n": 2,
+    "mae": 390.625,
+    "rmse": 390.625,
+    "mape": 10.730404347425623,
+    "mape_excluded": 0
+   },
+   "volume_change_errors_mm3": {
+    "n": 2,
+    "mae": 460.9375,
+    "rmse": 544.0776670775047
+   },
+   "percent_change_errors": {
+    "n": 2,
+    "mae_percentage_points": 10.93422950055264,
+    "median_abs_error_percentage_points": 10.93422950055264
+   },
+   "rows": [
+    {
+     "patient_id": "SYN-0008",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0016",
+     "lesion_id": "SYN-0016-L1",
+     "ref_change": "stable",
+     "pred_change": "stable",
+     "pred_change_reported": "stable",
+     "registration_reliable": true,
+     "ref_v1": 3671.875,
+     "ref_v2": 4234.375,
+     "pred_v1": 3281.25,
+     "pred_v2": 3671.875,
+     "associated": true,
+     "association_distance_mm": 0.49008614504615755,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": 15.319148936170212,
+     "pred_pct": 11.904761904761903
+    },
+    {
+     "patient_id": "SYN-0016",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0017",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0020",
+     "lesion_id": "SYN-0020-L1",
+     "ref_change": "new",
+     "pred_change": "none",
+     "pred_change_reported": "none",
+     "registration_reliable": true,
+     "ref_v1": 0.0,
+     "ref_v2": 2875.0,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 118.35168859290042,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": null,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0020",
+     "lesion_id": "SYN-0020-L2",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "new",
+     "registration_reliable": true,
+     "ref_v1": 1328.125,
+     "ref_v2": 3312.5,
+     "pred_v1": 0.0,
+     "pred_v2": 2250.0,
+     "associated": true,
+     "association_distance_mm": 0.4760656556573986,
+     "match_status": "potentially_new",
+     "association_correct": false,
+     "ref_pct": 149.41176470588235,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0020",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 1,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0023",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0032",
+     "lesion_id": "SYN-0032-L1",
+     "ref_change": "stable",
+     "pred_change": "decreased",
+     "pred_change_reported": "decreased",
+     "registration_reliable": true,
+     "ref_v1": 3609.375,
+     "ref_v2": 3500.0,
+     "pred_v1": 4000.0,
+     "pred_v2": 3140.625,
+     "associated": true,
+     "association_distance_mm": 0.9146123042591554,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": -3.0303030303030303,
+     "pred_pct": -21.484375
+    },
+    {
+     "patient_id": "SYN-0032",
+     "lesion_id": "SYN-0032-L2",
+     "ref_change": "decreased",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 1375.0,
+     "ref_v2": 453.125,
+     "pred_v1": 1734.375,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 1.577880823932955,
+     "match_status": "potentially_resolved",
+     "association_correct": false,
+     "ref_pct": -67.04545454545455,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0032",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 0,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0040",
+     "lesion_id": "SYN-0040-L1",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 4609.375,
+     "ref_v2": 0.0,
+     "pred_v1": 3781.25,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 1.4013008663009496,
+     "match_status": "potentially_resolved",
+     "association_correct": true,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0040",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0041",
+     "lesion_id": "SYN-0041-L1",
+     "ref_change": "resolved",
+     "pred_change": "none",
+     "pred_change_reported": "none",
+     "registration_reliable": true,
+     "ref_v1": 2046.875,
+     "ref_v2": 0.0,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 1000000000.0,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -100.0,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0041",
+     "lesion_id": "SYN-0041-L2",
+     "ref_change": "decreased",
+     "pred_change": "none",
+     "pred_change_reported": "none",
+     "registration_reliable": true,
+     "ref_v1": 1359.375,
+     "ref_v2": 781.25,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 1000000000.0,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -42.5287356321839,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0041",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0043",
+     "lesion_id": "SYN-0043-L1",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "new",
+     "registration_reliable": true,
+     "ref_v1": 1640.625,
+     "ref_v2": 4171.875,
+     "pred_v1": 0.0,
+     "pred_v2": 5343.75,
+     "associated": true,
+     "association_distance_mm": 2.6342910484935373,
+     "match_status": "potentially_new",
+     "association_correct": false,
+     "ref_pct": 154.2857142857143,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0043",
+     "lesion_id": "SYN-0043-L2",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 3437.5,
+     "ref_v2": 0.0,
+     "pred_v1": 2375.0,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 0.1121994536518034,
+     "match_status": "potentially_resolved",
+     "association_correct": true,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0043",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 1,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0046",
+     "lesion_id": "SYN-0046-L1",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "new",
+     "registration_reliable": true,
+     "ref_v1": 1515.625,
+     "ref_v2": 3781.25,
+     "pred_v1": 0.0,
+     "pred_v2": 2156.25,
+     "associated": true,
+     "association_distance_mm": 0.5351095993650623,
+     "match_status": "potentially_new",
+     "association_correct": false,
+     "ref_pct": 149.48453608247422,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0046",
+     "lesion_id": "SYN-0046-L2",
+     "ref_change": "stable",
+     "pred_change": "none",
+     "pred_change_reported": "none",
+     "registration_reliable": true,
+     "ref_v1": 546.875,
+     "ref_v2": 453.125,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 139.17213958571796,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -17.142857142857142,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0046",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 1,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    }
+   ]
+  },
+  "contextflow|unregistered|combined": {
+   "detector": "contextflow",
+   "registration": false,
+   "matching_mode": "combined",
+   "n_pairs": 10,
+   "n_reference_lesions": 12,
+   "n_associated": 8,
+   "change_category": {
+    "n": 12,
+    "accuracy": 0.25,
+    "confusion_ref_rows_pred_cols": {
+     "decreased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 1,
+      "stable": 0
+     },
+     "increased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 3,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "new": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 0
+     },
+     "none": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "resolved": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 2,
+      "stable": 0
+     },
+     "stable": {
+      "decreased": 1,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 1
+     }
+    }
+   },
+   "change_category_as_reported": {
+    "n": 12,
+    "accuracy": 0.0,
+    "confusion_ref_rows_pred_cols": {
+     "decreased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "resolved": 0,
+      "stable": 0,
+      "undetermined": 2
+     },
+     "increased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "resolved": 0,
+      "stable": 0,
+      "undetermined": 3
+     },
+     "new": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "resolved": 0,
+      "stable": 0,
+      "undetermined": 1
+     },
+     "resolved": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "resolved": 0,
+      "stable": 0,
+      "undetermined": 3
+     },
+     "stable": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "resolved": 0,
+      "stable": 0,
+      "undetermined": 3
+     },
+     "undetermined": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "resolved": 0,
+      "stable": 0,
+      "undetermined": 0
+     }
+    }
+   },
+   "association_accuracy": 0.16666666666666666,
+   "volume_later_errors_mm3": {
+    "n": 2,
+    "mae": 460.9375,
+    "rmse": 471.993983343538,
+    "mape": 11.775994992092778,
+    "mape_excluded": 0
+   },
+   "volume_earlier_errors_mm3": {
+    "n": 2,
+    "mae": 390.625,
+    "rmse": 393.42744725044287,
+    "mape": 10.7193515704154,
+    "mape_excluded": 0
+   },
+   "volume_change_errors_mm3": {
+    "n": 2,
+    "mae": 414.0625,
+    "rmse": 504.9800815997597
+   },
+   "percent_change_errors": {
+    "n": 2,
+    "mae_percentage_points": 9.657817770676235,
+    "median_abs_error_percentage_points": 9.657817770676235
+   },
+   "rows": [
+    {
+     "patient_id": "SYN-0008",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "not_registered"
+    },
+    {
+     "patient_id": "SYN-0016",
+     "lesion_id": "SYN-0016-L1",
+     "ref_change": "stable",
+     "pred_change": "stable",
+     "pred_change_reported": "undetermined",
+     "registration_reliable": false,
+     "ref_v1": 3671.875,
+     "ref_v2": 4234.375,
+     "pred_v1": 3234.375,
+     "pred_v2": 3671.875,
+     "associated": true,
+     "association_distance_mm": 0.49008614504615755,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": 15.319148936170212,
+     "pred_pct": 13.526570048309178
+    },
+    {
+     "patient_id": "SYN-0016",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "not_registered"
+    },
+    {
+     "patient_id": "SYN-0017",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "not_registered"
+    },
+    {
+     "patient_id": "SYN-0020",
+     "lesion_id": "SYN-0020-L1",
+     "ref_change": "new",
+     "pred_change": "none",
+     "pred_change_reported": "undetermined",
+     "registration_reliable": false,
+     "ref_v1": 0.0,
+     "ref_v2": 2875.0,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 118.35168859290042,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": null,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0020",
+     "lesion_id": "SYN-0020-L2",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "undetermined",
+     "registration_reliable": false,
+     "ref_v1": 1328.125,
+     "ref_v2": 3312.5,
+     "pred_v1": 0.0,
+     "pred_v2": 2250.0,
+     "associated": true,
+     "association_distance_mm": 0.4760656556573986,
+     "match_status": "uncertain",
+     "association_correct": false,
+     "ref_pct": 149.41176470588235,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0020",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 1
+     },
+     "registration_quality": "not_registered"
+    },
+    {
+     "patient_id": "SYN-0023",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "not_registered"
+    },
+    {
+     "patient_id": "SYN-0032",
+     "lesion_id": "SYN-0032-L1",
+     "ref_change": "stable",
+     "pred_change": "decreased",
+     "pred_change_reported": "undetermined",
+     "registration_reliable": false,
+     "ref_v1": 3609.375,
+     "ref_v2": 3500.0,
+     "pred_v1": 3953.125,
+     "pred_v2": 3140.625,
+     "associated": true,
+     "association_distance_mm": 0.9146123042591554,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": -3.0303030303030303,
+     "pred_pct": -20.55335968379447
+    },
+    {
+     "patient_id": "SYN-0032",
+     "lesion_id": "SYN-0032-L2",
+     "ref_change": "decreased",
+     "pred_change": "resolved",
+     "pred_change_reported": "undetermined",
+     "registration_reliable": false,
+     "ref_v1": 1375.0,
+     "ref_v2": 453.125,
+     "pred_v1": 1765.625,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 8.771689755847644,
+     "match_status": "uncertain",
+     "association_correct": false,
+     "ref_pct": -67.04545454545455,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0032",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 1
+     },
+     "registration_quality": "not_registered"
+    },
+    {
+     "patient_id": "SYN-0040",
+     "lesion_id": "SYN-0040-L1",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "undetermined",
+     "registration_reliable": false,
+     "ref_v1": 4609.375,
+     "ref_v2": 0.0,
+     "pred_v1": 3687.5,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 5.656699878255046,
+     "match_status": "uncertain",
+     "association_correct": false,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0040",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 1
+     },
+     "registration_quality": "not_registered"
+    },
+    {
+     "patient_id": "SYN-0041",
+     "lesion_id": "SYN-0041-L1",
+     "ref_change": "resolved",
+     "pred_change": "none",
+     "pred_change_reported": "undetermined",
+     "registration_reliable": false,
+     "ref_v1": 2046.875,
+     "ref_v2": 0.0,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 1000000000.0,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -100.0,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0041",
+     "lesion_id": "SYN-0041-L2",
+     "ref_change": "decreased",
+     "pred_change": "none",
+     "pred_change_reported": "undetermined",
+     "registration_reliable": false,
+     "ref_v1": 1359.375,
+     "ref_v2": 781.25,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 1000000000.0,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -42.5287356321839,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0041",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "not_registered"
+    },
+    {
+     "patient_id": "SYN-0043",
+     "lesion_id": "SYN-0043-L1",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "undetermined",
+     "registration_reliable": false,
+     "ref_v1": 1640.625,
+     "ref_v2": 4171.875,
+     "pred_v1": 0.0,
+     "pred_v2": 5343.75,
+     "associated": true,
+     "association_distance_mm": 2.6342910484935373,
+     "match_status": "uncertain",
+     "association_correct": false,
+     "ref_pct": 154.2857142857143,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0043",
+     "lesion_id": "SYN-0043-L2",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "undetermined",
+     "registration_reliable": false,
+     "ref_v1": 3437.5,
+     "ref_v2": 0.0,
+     "pred_v1": 2343.75,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 4.501203129481316,
+     "match_status": "uncertain",
+     "association_correct": false,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0043",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 3
+     },
+     "registration_quality": "not_registered"
+    },
+    {
+     "patient_id": "SYN-0046",
+     "lesion_id": "SYN-0046-L1",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "undetermined",
+     "registration_reliable": false,
+     "ref_v1": 1515.625,
+     "ref_v2": 3781.25,
+     "pred_v1": 0.0,
+     "pred_v2": 2156.25,
+     "associated": true,
+     "association_distance_mm": 0.5351095993650623,
+     "match_status": "uncertain",
+     "association_correct": false,
+     "ref_pct": 149.48453608247422,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0046",
+     "lesion_id": "SYN-0046-L2",
+     "ref_change": "stable",
+     "pred_change": "none",
+     "pred_change_reported": "undetermined",
+     "registration_reliable": false,
+     "ref_v1": 546.875,
+     "ref_v2": 453.125,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 139.17213958571796,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -17.142857142857142,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0046",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 1
+     },
+     "registration_quality": "not_registered"
+    }
+   ]
+  },
+  "contextflow|registered|iou_only": {
+   "detector": "contextflow",
+   "registration": true,
+   "matching_mode": "iou",
+   "n_pairs": 10,
+   "n_reference_lesions": 12,
+   "n_associated": 8,
+   "change_category": {
+    "n": 12,
+    "accuracy": 0.25,
+    "confusion_ref_rows_pred_cols": {
+     "decreased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 1,
+      "stable": 0
+     },
+     "increased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 3,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "new": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 0
+     },
+     "none": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "resolved": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 2,
+      "stable": 0
+     },
+     "stable": {
+      "decreased": 1,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 1
+     }
+    }
+   },
+   "change_category_as_reported": {
+    "n": 12,
+    "accuracy": 0.25,
+    "confusion_ref_rows_pred_cols": {
+     "decreased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 1,
+      "stable": 0
+     },
+     "increased": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 3,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "new": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 0
+     },
+     "none": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 0,
+      "resolved": 0,
+      "stable": 0
+     },
+     "resolved": {
+      "decreased": 0,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 2,
+      "stable": 0
+     },
+     "stable": {
+      "decreased": 1,
+      "increased": 0,
+      "new": 0,
+      "none": 1,
+      "resolved": 0,
+      "stable": 1
+     }
+    }
+   },
+   "association_accuracy": 0.3333333333333333,
+   "volume_later_errors_mm3": {
+    "n": 2,
+    "mae": 460.9375,
+    "rmse": 471.993983343538,
+    "mape": 11.775994992092778,
+    "mape_excluded": 0
+   },
+   "volume_earlier_errors_mm3": {
+    "n": 2,
+    "mae": 390.625,
+    "rmse": 390.625,
+    "mape": 10.730404347425623,
+    "mape_excluded": 0
+   },
+   "volume_change_errors_mm3": {
+    "n": 2,
+    "mae": 460.9375,
+    "rmse": 544.0776670775047
+   },
+   "percent_change_errors": {
+    "n": 2,
+    "mae_percentage_points": 10.93422950055264,
+    "median_abs_error_percentage_points": 10.93422950055264
+   },
+   "rows": [
+    {
+     "patient_id": "SYN-0008",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0016",
+     "lesion_id": "SYN-0016-L1",
+     "ref_change": "stable",
+     "pred_change": "stable",
+     "pred_change_reported": "stable",
+     "registration_reliable": true,
+     "ref_v1": 3671.875,
+     "ref_v2": 4234.375,
+     "pred_v1": 3281.25,
+     "pred_v2": 3671.875,
+     "associated": true,
+     "association_distance_mm": 0.49008614504615755,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": 15.319148936170212,
+     "pred_pct": 11.904761904761903
+    },
+    {
+     "patient_id": "SYN-0016",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0017",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0020",
+     "lesion_id": "SYN-0020-L1",
+     "ref_change": "new",
+     "pred_change": "none",
+     "pred_change_reported": "none",
+     "registration_reliable": true,
+     "ref_v1": 0.0,
+     "ref_v2": 2875.0,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 118.35168859290042,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": null,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0020",
+     "lesion_id": "SYN-0020-L2",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "new",
+     "registration_reliable": true,
+     "ref_v1": 1328.125,
+     "ref_v2": 3312.5,
+     "pred_v1": 0.0,
+     "pred_v2": 2250.0,
+     "associated": true,
+     "association_distance_mm": 0.4760656556573986,
+     "match_status": "potentially_new",
+     "association_correct": false,
+     "ref_pct": 149.41176470588235,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0020",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 1,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0023",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0032",
+     "lesion_id": "SYN-0032-L1",
+     "ref_change": "stable",
+     "pred_change": "decreased",
+     "pred_change_reported": "decreased",
+     "registration_reliable": true,
+     "ref_v1": 3609.375,
+     "ref_v2": 3500.0,
+     "pred_v1": 4000.0,
+     "pred_v2": 3140.625,
+     "associated": true,
+     "association_distance_mm": 0.9146123042591554,
+     "match_status": "matched",
+     "association_correct": true,
+     "ref_pct": -3.0303030303030303,
+     "pred_pct": -21.484375
+    },
+    {
+     "patient_id": "SYN-0032",
+     "lesion_id": "SYN-0032-L2",
+     "ref_change": "decreased",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 1375.0,
+     "ref_v2": 453.125,
+     "pred_v1": 1734.375,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 1.577880823932955,
+     "match_status": "potentially_resolved",
+     "association_correct": false,
+     "ref_pct": -67.04545454545455,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0032",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 0,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0040",
+     "lesion_id": "SYN-0040-L1",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 4609.375,
+     "ref_v2": 0.0,
+     "pred_v1": 3781.25,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 1.4013008663009496,
+     "match_status": "potentially_resolved",
+     "association_correct": true,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0040",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0041",
+     "lesion_id": "SYN-0041-L1",
+     "ref_change": "resolved",
+     "pred_change": "none",
+     "pred_change_reported": "none",
+     "registration_reliable": true,
+     "ref_v1": 2046.875,
+     "ref_v2": 0.0,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 1000000000.0,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -100.0,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0041",
+     "lesion_id": "SYN-0041-L2",
+     "ref_change": "decreased",
+     "pred_change": "none",
+     "pred_change_reported": "none",
+     "registration_reliable": true,
+     "ref_v1": 1359.375,
+     "ref_v2": 781.25,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 1000000000.0,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -42.5287356321839,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0041",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 0,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0043",
+     "lesion_id": "SYN-0043-L1",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "new",
+     "registration_reliable": true,
+     "ref_v1": 1640.625,
+     "ref_v2": 4171.875,
+     "pred_v1": 0.0,
+     "pred_v2": 5343.75,
+     "associated": true,
+     "association_distance_mm": 2.6342910484935373,
+     "match_status": "potentially_new",
+     "association_correct": false,
+     "ref_pct": 154.2857142857143,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0043",
+     "lesion_id": "SYN-0043-L2",
+     "ref_change": "resolved",
+     "pred_change": "resolved",
+     "pred_change_reported": "resolved",
+     "registration_reliable": true,
+     "ref_v1": 3437.5,
+     "ref_v2": 0.0,
+     "pred_v1": 2375.0,
+     "pred_v2": 0.0,
+     "associated": true,
+     "association_distance_mm": 0.1121994536518034,
+     "match_status": "potentially_resolved",
+     "association_correct": true,
+     "ref_pct": -100.0,
+     "pred_pct": -100.0
+    },
+    {
+     "patient_id": "SYN-0043",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 1,
+      "n_new": 1,
+      "n_resolved": 1,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    },
+    {
+     "patient_id": "SYN-0046",
+     "lesion_id": "SYN-0046-L1",
+     "ref_change": "increased",
+     "pred_change": "new",
+     "pred_change_reported": "new",
+     "registration_reliable": true,
+     "ref_v1": 1515.625,
+     "ref_v2": 3781.25,
+     "pred_v1": 0.0,
+     "pred_v2": 2156.25,
+     "associated": true,
+     "association_distance_mm": 0.5351095993650623,
+     "match_status": "potentially_new",
+     "association_correct": false,
+     "ref_pct": 149.48453608247422,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0046",
+     "lesion_id": "SYN-0046-L2",
+     "ref_change": "stable",
+     "pred_change": "none",
+     "pred_change_reported": "none",
+     "registration_reliable": true,
+     "ref_v1": 546.875,
+     "ref_v2": 453.125,
+     "pred_v1": 0.0,
+     "pred_v2": 0.0,
+     "associated": false,
+     "association_distance_mm": 139.17213958571796,
+     "match_status": null,
+     "association_correct": false,
+     "ref_pct": -17.142857142857142,
+     "pred_pct": null
+    },
+    {
+     "patient_id": "SYN-0046",
+     "pair_summary": true,
+     "counts": {
+      "n_matched": 0,
+      "n_new": 1,
+      "n_resolved": 0,
+      "n_uncertain": 0
+     },
+     "registration_quality": "acceptable"
+    }
+   ]
+  }
+ },
+ "vqa": {
+  "vqa_with_anomaly": {
+   "model": "vqa_with_anomaly",
+   "use_anomaly": true,
+   "detector": "contextflow",
+   "n_test_items": 100,
+   "calibration_single": {
+    "ece_raw": 0.11885399296879773,
+    "ece_temperature_scaled": 0.07924139127135277,
+    "temperature": 1.6,
+    "brier_raw": 0.2699495340387673,
+    "brier_temperature_scaled": 0.24779877725269572,
+    "reliability_bins": [
+     {
+      "bin": [
+       0.4,
+       0.5
+      ],
+      "n": 4,
+      "accuracy": 1.0,
+      "confidence": 0.46566906571388245
+     },
+     {
+      "bin": [
+       0.5,
+       0.6000000000000001
+      ],
+      "n": 6,
+      "accuracy": 0.3333333333333333,
+      "confidence": 0.5678145984808604
+     },
+     {
+      "bin": [
+       0.6000000000000001,
+       0.7000000000000001
+      ],
+      "n": 13,
+      "accuracy": 0.6153846153846154,
+      "confidence": 0.6458858710068923
+     },
+     {
+      "bin": [
+       0.7000000000000001,
+       0.8
+      ],
+      "n": 2,
+      "accuracy": 0.5,
+      "confidence": 0.7505922019481659
+     },
+     {
+      "bin": [
+       0.8,
+       0.9
+      ],
+      "n": 4,
+      "accuracy": 0.75,
+      "confidence": 0.8676047623157501
+     },
+     {
+      "bin": [
+       0.9,
+       1.0
+      ],
+      "n": 51,
+      "accuracy": 0.9411764705882353,
+      "confidence": 0.969156474459405
+     }
+    ],
+    "n": 80
+   },
+   "calibration_temporal": {
+    "ece_raw": 0.1894217640161514,
+    "ece_temperature_scaled": 0.17323242872953415,
+    "temperature": 3.0,
+    "brier_raw": 0.37073848503336193,
+    "brier_temperature_scaled": 0.3630255963020401,
+    "reliability_bins": [
+     {
+      "bin": [
+       0.2,
+       0.30000000000000004
+      ],
+      "n": 1,
+      "accuracy": 1.0,
+      "confidence": 0.2925648093223572
+     },
+     {
+      "bin": [
+       0.30000000000000004,
+       0.4
+      ],
+      "n": 5,
+      "accuracy": 0.2,
+      "confidence": 0.3534989655017853
+     },
+     {
+      "bin": [
+       0.4,
+       0.5
+      ],
+      "n": 1,
+      "accuracy": 1.0,
+      "confidence": 0.4005191922187805
+     },
+     {
+      "bin": [
+       0.5,
+       0.6000000000000001
+      ],
+      "n": 2,
+      "accuracy": 1.0,
+      "confidence": 0.5994803011417389
+     },
+     {
+      "bin": [
+       0.6000000000000001,
+       0.7000000000000001
+      ],
+      "n": 1,
+      "accuracy": 1.0,
+      "confidence": 0.6072591543197632
+     },
+     {
+      "bin": [
+       0.9,
+       1.0
+      ],
+      "n": 10,
+      "accuracy": 0.9,
+      "confidence": 0.9196457505226135
+     }
+    ],
+    "n": 20
+   },
+   "per_task": {
+    "existence": {
+     "n": 20,
+     "exact_match": 0.9,
+     "macro_f1": 0.8958333333333334,
+     "accuracy_ci": {
+      "point": 0.9,
+      "ci95": [
+       0.75,
+       1.0
+      ]
+     }
+    },
+    "laterality": {
+     "n": 20,
+     "exact_match": 0.75,
+     "macro_f1": 0.688888888888889,
+     "accuracy_ci": {
+      "point": 0.75,
+      "ci95": [
+       0.55,
+       0.95
+      ]
+     }
+    },
+    "new_finding": {
+     "n": 10,
+     "exact_match": 0.9,
+     "macro_f1": 0.4736842105263158,
+     "accuracy_ci": {
+      "point": 0.9,
+      "ci95": [
+       0.7,
+       1.0
+      ]
+     }
+    },
+    "progression": {
+     "n": 10,
+     "exact_match": 0.6,
+     "macro_f1": 0.5416666666666666,
+     "accuracy_ci": {
+      "point": 0.6,
+      "ci95": [
+       0.3,
+       0.9
+      ]
+     },
+     "region_token_hit_rate": 0.8
+    },
+    "where": {
+     "n": 20,
+     "exact_match": 0.9,
+     "macro_f1": 0.8958333333333334,
+     "accuracy_ci": {
+      "point": 0.9,
+      "ci95": [
+       0.75,
+       1.0
+      ]
+     },
+     "region_token_hit_rate": 0.6923076923076923
+    },
+    "zone": {
+     "n": 20,
+     "exact_match": 0.75,
+     "macro_f1": 0.5456349206349207,
+     "accuracy_ci": {
+      "point": 0.75,
+      "ci95": [
+       0.5,
+       1.0
+      ]
+     }
+    }
+   },
+   "overall_accuracy": {
+    "point": 0.81,
+    "ci95": [
+     0.68,
+     0.92
+    ]
+   },
+   "router_heldout_paraphrases": {
+    "n": 9,
+    "accuracy": 1.0,
+    "rows": [
+     {
+      "task": "existence",
+      "question": "Can you find any suspicious area here?",
+      "routed": "existence",
+      "method": "keyword_fallback"
+     },
+     {
+      "task": "laterality",
+      "question": "Is the lesion located on the right or the left?",
+      "routed": "laterality",
+      "method": "learned"
+     },
+     {
+      "task": "zone",
+      "question": "Is it in the upper or lower part of the lung?",
+      "routed": "zone",
+      "method": "learned"
+     },
+     {
+      "task": "where",
+      "question": "Point out where the abnormal region is.",
+      "routed": "where",
+      "method": "learned"
+     },
+     {
+      "task": "progression",
+      "question": "Has the size of the lesion changed compared with the earlier scan?",
+      "routed": "progression",
+      "method": "learned"
+     },
+     {
+      "task": "new_finding",
+      "question": "Did any new suspicious region appear since the prior examination?",
+      "routed": "new_finding",
+      "method": "learned"
+     },
+     {
+      "task": "measurement",
+      "question": "What is the change in volume in mm3?",
+      "routed": "measurement",
+      "method": "learned"
+     },
+     {
+      "task": "appearance",
+      "question": "Can you describe what the finding looks like?",
+      "routed": "appearance",
+      "method": "learned"
+     },
+     {
+      "task": "unsupported",
+      "question": "What dose of radiation therapy is needed?",
+      "routed": "unsupported",
+      "method": "keyword_fallback"
+     }
+    ]
+   }
+  },
+  "vqa_without_anomaly": {
+   "model": "vqa_without_anomaly",
+   "use_anomaly": false,
+   "detector": "contextflow",
+   "n_test_items": 100,
+   "calibration_single": {
+    "ece_raw": 0.03955037631094457,
+    "ece_temperature_scaled": 0.0805471166968346,
+    "temperature": 1.6,
+    "brier_raw": 0.19357472010232232,
+    "brier_temperature_scaled": 0.20136357600706356,
+    "reliability_bins": [
+     {
+      "bin": [
+       0.30000000000000004,
+       0.4
+      ],
+      "n": 4,
+      "accuracy": 0.25,
+      "confidence": 0.3660128265619278
+     },
+     {
+      "bin": [
+       0.4,
+       0.5
+      ],
+      "n": 7,
+      "accuracy": 0.2857142857142857,
+      "confidence": 0.45429283380508423
+     },
+     {
+      "bin": [
+       0.5,
+       0.6000000000000001
+      ],
+      "n": 14,
+      "accuracy": 0.7142857142857143,
+      "confidence": 0.5471615408148084
+     },
+     {
+      "bin": [
+       0.6000000000000001,
+       0.7000000000000001
+      ],
+      "n": 5,
+      "accuracy": 0.8,
+      "confidence": 0.6169263243675231
+     },
+     {
+      "bin": [
+       0.9,
+       1.0
+      ],
+      "n": 50,
+      "accuracy": 1.0,
+      "confidence": 0.969108772277832
+     }
+    ],
+    "n": 80
+   },
+   "calibration_temporal": {
+    "ece_raw": 0.1796900197863579,
+    "ece_temperature_scaled": 0.1682715505361557,
+    "temperature": 2.5,
+    "brier_raw": 0.3761352150116547,
+    "brier_temperature_scaled": 0.37151124947964986,
+    "reliability_bins": [
+     {
+      "bin": [
+       0.2,
+       0.30000000000000004
+      ],
+      "n": 7,
+      "accuracy": 0.5714285714285714,
+      "confidence": 0.2771493877683367
+     },
+     {
+      "bin": [
+       0.6000000000000001,
+       0.7000000000000001
+      ],
+      "n": 4,
+      "accuracy": 0.75,
+      "confidence": 0.663369208574295
+     },
+     {
+      "bin": [
+       0.7000000000000001,
+       0.8
+      ],
+      "n": 2,
+      "accuracy": 0.5,
+      "confidence": 0.7036334574222565
+     },
+     {
+      "bin": [
+       0.8,
+       0.9
+      ],
+      "n": 1,
+      "accuracy": 1.0,
+      "confidence": 0.8659307360649109
+     },
+     {
+      "bin": [
+       0.9,
+       1.0
+      ],
+      "n": 6,
+      "accuracy": 1.0,
+      "confidence": 0.9303971032301585
+     }
+    ],
+    "n": 20
+   },
+   "per_task": {
+    "existence": {
+     "n": 20,
+     "exact_match": 1.0,
+     "macro_f1": 1.0,
+     "accuracy_ci": {
+      "point": 1.0,
+      "ci95": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "laterality": {
+     "n": 20,
+     "exact_match": 0.6,
+     "macro_f1": 0.475,
+     "accuracy_ci": {
+      "point": 0.6,
+      "ci95": [
+       0.35,
+       0.85
+      ]
+     }
+    },
+    "new_finding": {
+     "n": 10,
+     "exact_match": 0.8,
+     "macro_f1": 0.4444444444444444,
+     "accuracy_ci": {
+      "point": 0.8,
+      "ci95": [
+       0.5,
+       1.0
+      ]
+     }
+    },
+    "progression": {
+     "n": 10,
+     "exact_match": 0.7,
+     "macro_f1": 0.7,
+     "accuracy_ci": {
+      "point": 0.7,
+      "ci95": [
+       0.4,
+       1.0
+      ]
+     },
+     "region_token_hit_rate": 0.8
+    },
+    "where": {
+     "n": 20,
+     "exact_match": 1.0,
+     "macro_f1": 1.0,
+     "accuracy_ci": {
+      "point": 1.0,
+      "ci95": [
+       1.0,
+       1.0
+      ]
+     },
+     "region_token_hit_rate": 0.8461538461538461
+    },
+    "zone": {
+     "n": 20,
+     "exact_match": 0.75,
+     "macro_f1": 0.5873015873015873,
+     "accuracy_ci": {
+      "point": 0.75,
+      "ci95": [
+       0.55,
+       0.95
+      ]
+     }
+    }
+   },
+   "overall_accuracy": {
+    "point": 0.82,
+    "ci95": [
+     0.71,
+     0.93
+    ]
+   },
+   "router_heldout_paraphrases": {
+    "n": 9,
+    "accuracy": 1.0,
+    "rows": [
+     {
+      "task": "existence",
+      "question": "Can you find any suspicious area here?",
+      "routed": "existence",
+      "method": "keyword_fallback"
+     },
+     {
+      "task": "laterality",
+      "question": "Is the lesion located on the right or the left?",
+      "routed": "laterality",
+      "method": "learned"
+     },
+     {
+      "task": "zone",
+      "question": "Is it in the upper or lower part of the lung?",
+      "routed": "zone",
+      "method": "learned"
+     },
+     {
+      "task": "where",
+      "question": "Point out where the abnormal region is.",
+      "routed": "where",
+      "method": "learned"
+     },
+     {
+      "task": "progression",
+      "question": "Has the size of the lesion changed compared with the earlier scan?",
+      "routed": "progression",
+      "method": "learned"
+     },
+     {
+      "task": "new_finding",
+      "question": "Did any new suspicious region appear since the prior examination?",
+      "routed": "new_finding",
+      "method": "learned"
+     },
+     {
+      "task": "measurement",
+      "question": "What is the change in volume in mm3?",
+      "routed": "measurement",
+      "method": "learned"
+     },
+     {
+      "task": "appearance",
+      "question": "Can you describe what the finding looks like?",
+      "routed": "appearance",
+      "method": "learned"
+     },
+     {
+      "task": "unsupported",
+      "question": "What dose of radiation therapy is needed?",
+      "routed": "unsupported",
+      "method": "keyword_fallback"
+     }
+    ]
+   }
+  }
+ },
+ "candidate_derived_answers": {
+  "existence": {
+   "n": 20,
+   "accuracy": 0.8
+  },
+  "laterality": {
+   "n": 20,
+   "accuracy": 0.7
+  },
+  "where": {
+   "n": 20,
+   "accuracy": 0.8
+  },
+  "zone": {
+   "n": 20,
+   "accuracy": 0.8
+  }
+ },
+ "peak_rss_mb": 1448.23828125,
+ "eval_runtime_s": 356.3
+}

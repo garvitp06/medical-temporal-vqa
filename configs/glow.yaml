@@ -1,0 +1,17 @@
+seed: 0
+model:
+  ctx_slices: 1          # 2.5D: slices k-1, k, k+1 as 3 channels
+  levels: 3
+  steps: 6
+  hidden: 64
+train:
+  protocol: normal_only  # normal_only | all  (original project protocol unverified)
+  patch: 64
+  batch_size: 32
+  epochs: 12
+  samples_per_epoch: 3200
+  val_samples: 640
+  lr: 0.0005
+  grad_clip: 50.0
+  warmup_steps: 100
+out_dir: experiments/glow

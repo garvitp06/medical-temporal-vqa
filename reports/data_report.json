@@ -1,0 +1,1782 @@
+{
+ "dataset": "synthetic_chest_ct_v1",
+ "synthetic": true,
+ "n_exams": 96,
+ "split_summary": {
+  "test": {
+   "patients": 10,
+   "examinations": 20,
+   "volumes": 20,
+   "abnormal_exams": 13,
+   "annotated_exams": 20,
+   "temporal_pairs": 10,
+   "qa_pairs": 100,
+   "annotated_lesion_instances": 20
+  },
+  "train": {
+   "patients": 29,
+   "examinations": 58,
+   "volumes": 58,
+   "abnormal_exams": 34,
+   "annotated_exams": 58,
+   "temporal_pairs": 29,
+   "qa_pairs": 290,
+   "annotated_lesion_instances": 52
+  },
+  "val": {
+   "patients": 9,
+   "examinations": 18,
+   "volumes": 18,
+   "abnormal_exams": 10,
+   "annotated_exams": 18,
+   "temporal_pairs": 9,
+   "qa_pairs": 90,
+   "annotated_lesion_instances": 13
+  }
+ },
+ "failed_or_excluded": [],
+ "preprocessing": {
+  "target_spacing": [
+   2.5,
+   2.5,
+   2.5
+  ],
+  "window_center": -600,
+  "window_width": 1500,
+  "normalize": "window_minus1_1",
+  "lung_mask_method": "auto",
+  "lungmask_weights": "/home/claude/medical-temporal-vqa/weights/unet_r231-d5d2fc3d.pth",
+  "min_lung_volume_ml": 500,
+  "max_lung_volume_ml": 9000
+ },
+ "per_exam": [
+  {
+   "exam_id": "SYN-0001-T1",
+   "status": "ok",
+   "seconds": 145.9,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     705.9345092773438
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3086.09375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 299,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0001-T2",
+   "status": "ok",
+   "seconds": 145.9,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     693.8701171875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2993.15625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 103,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0002-T1",
+   "status": "ok",
+   "seconds": 124.0,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     686.8397827148438
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2977.5,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0002-T2",
+   "status": "ok",
+   "seconds": 115.6,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     687.6571044921875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2995.71875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0003-T1",
+   "status": "ok",
+   "seconds": 119.2,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     700.4468383789062
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3234.0625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0003-T2",
+   "status": "ok",
+   "seconds": 124.0,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     688.9149780273438
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3162.328125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0004-T1",
+   "status": "ok",
+   "seconds": 116.1,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     698.1761474609375
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3154.765625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0004-T2",
+   "status": "ok",
+   "seconds": 121.2,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     683.0661010742188
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3178.453125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 207,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0005-T1",
+   "status": "ok",
+   "seconds": 116.4,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     694.3641967773438
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3174.15625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 413,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0005-T2",
+   "status": "ok",
+   "seconds": 119.5,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     685.4976196289062
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3112.65625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 290,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0006-T1",
+   "status": "ok",
+   "seconds": 115.2,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     686.0567626953125
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3129.5,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 296,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0006-T2",
+   "status": "ok",
+   "seconds": 117.1,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     687.4471435546875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3159.265625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 362,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0007-T1",
+   "status": "ok",
+   "seconds": 119.0,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     721.5971069335938
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2798.34375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 204,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0007-T2",
+   "status": "ok",
+   "seconds": 121.7,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     691.5474243164062
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2800.09375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 54,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0008-T1",
+   "status": "ok",
+   "seconds": 116.4,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     687.8115234375
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3044.921875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0008-T2",
+   "status": "ok",
+   "seconds": 119.5,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     685.6082763671875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3116.578125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0009-T1",
+   "status": "ok",
+   "seconds": 118.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     699.269775390625
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3317.390625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0009-T2",
+   "status": "ok",
+   "seconds": 121.5,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     703.3978271484375
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3277.953125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 617,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0010-T1",
+   "status": "ok",
+   "seconds": 122.7,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     702.352783203125
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3239.21875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 171,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0010-T2",
+   "status": "ok",
+   "seconds": 119.6,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     686.2147216796875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3142.3125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 41,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0011-T1",
+   "status": "ok",
+   "seconds": 115.9,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     710.1680908203125
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3135.890625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 157,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0011-T2",
+   "status": "ok",
+   "seconds": 122.6,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     702.89599609375
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3257.296875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 417,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0012-T1",
+   "status": "ok",
+   "seconds": 117.1,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     695.91455078125
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3307.453125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 420,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0012-T2",
+   "status": "ok",
+   "seconds": 123.0,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     700.5905151367188
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3248.578125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 612,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0013-T1",
+   "status": "ok",
+   "seconds": 116.5,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     694.3715209960938
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3157.4375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0013-T2",
+   "status": "ok",
+   "seconds": 126.4,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     690.9436645507812
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3204.765625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0014-T1",
+   "status": "ok",
+   "seconds": 117.1,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     686.6307983398438
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3074.1875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0014-T2",
+   "status": "ok",
+   "seconds": 122.8,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     685.0900268554688
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3115.21875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0015-T1",
+   "status": "ok",
+   "seconds": 124.2,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     684.200439453125
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3214.046875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0015-T2",
+   "status": "ok",
+   "seconds": 122.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     687.1966552734375
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3100.046875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0016-T1",
+   "status": "ok",
+   "seconds": 121.9,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     711.5468139648438
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3001.390625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 235,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0016-T2",
+   "status": "ok",
+   "seconds": 122.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     700.7872924804688
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3093.75,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 271,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0017-T1",
+   "status": "ok",
+   "seconds": 122.6,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     696.8916625976562
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3019.984375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0017-T2",
+   "status": "ok",
+   "seconds": 124.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     702.1783447265625
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2991.75,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0018-T1",
+   "status": "ok",
+   "seconds": 122.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     695.0343627929688
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3461.0,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 157,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0018-T2",
+   "status": "ok",
+   "seconds": 123.2,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     698.3086547851562
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3458.453125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 299,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0019-T1",
+   "status": "ok",
+   "seconds": 118.1,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     685.0416870117188
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3527.546875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0019-T2",
+   "status": "ok",
+   "seconds": 123.4,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     693.5755615234375
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3535.0,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0020-T1",
+   "status": "ok",
+   "seconds": 121.4,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     697.7410278320312
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2870.9375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 85,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0020-T2",
+   "status": "ok",
+   "seconds": 120.7,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     685.5829467773438
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2855.75,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 396,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0021-T1",
+   "status": "ok",
+   "seconds": 119.8,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     687.2586059570312
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3176.96875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 310,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0021-T2",
+   "status": "ok",
+   "seconds": 121.8,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     714.529052734375
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3191.609375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 302,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0022-T1",
+   "status": "ok",
+   "seconds": 120.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     692.3809204101562
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2901.84375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 49,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0022-T2",
+   "status": "ok",
+   "seconds": 122.9,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     691.0872802734375
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2826.625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0023-T1",
+   "status": "ok",
+   "seconds": 115.9,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     712.212890625
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3032.109375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0023-T2",
+   "status": "ok",
+   "seconds": 122.2,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     685.8107299804688
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3106.96875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0024-T1",
+   "status": "ok",
+   "seconds": 119.6,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     709.3969116210938
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2881.390625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0024-T2",
+   "status": "ok",
+   "seconds": 118.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     697.3753051757812
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3009.875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0025-T1",
+   "status": "ok",
+   "seconds": 116.7,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     679.4550170898438
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3250.09375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 291,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0025-T2",
+   "status": "ok",
+   "seconds": 121.9,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     708.367431640625
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3204.171875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 352,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0026-T1",
+   "status": "ok",
+   "seconds": 115.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     695.784912109375
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3457.75,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 263,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0026-T2",
+   "status": "ok",
+   "seconds": 120.4,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     713.1912841796875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3392.578125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 208,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0027-T1",
+   "status": "ok",
+   "seconds": 118.9,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     699.2369384765625
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3250.15625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 97,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0027-T2",
+   "status": "ok",
+   "seconds": 121.0,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     702.6405639648438
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3241.53125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 31,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0028-T1",
+   "status": "ok",
+   "seconds": 115.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     681.446044921875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3116.59375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 248,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0028-T2",
+   "status": "ok",
+   "seconds": 117.0,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     682.119384765625
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3212.28125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 59,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0029-T1",
+   "status": "ok",
+   "seconds": 121.9,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     695.2277221679688
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3289.234375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 130,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0029-T2",
+   "status": "ok",
+   "seconds": 121.2,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     695.83154296875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3343.21875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 262,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0030-T1",
+   "status": "ok",
+   "seconds": 115.2,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     707.8524780273438
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3084.71875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0030-T2",
+   "status": "ok",
+   "seconds": 122.4,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     684.8058471679688
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3088.28125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0031-T1",
+   "status": "ok",
+   "seconds": 123.7,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     694.372314453125
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2996.78125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0031-T2",
+   "status": "ok",
+   "seconds": 124.4,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     691.2923583984375
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2979.171875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0032-T1",
+   "status": "ok",
+   "seconds": 121.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     686.3626098632812
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3223.171875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 319,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0032-T2",
+   "status": "ok",
+   "seconds": 123.8,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     708.38037109375
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3157.546875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 253,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0033-T1",
+   "status": "ok",
+   "seconds": 123.1,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     688.718505859375
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3210.09375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 117,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0033-T2",
+   "status": "ok",
+   "seconds": 124.6,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     686.9545288085938
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3208.203125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 25,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0034-T1",
+   "status": "ok",
+   "seconds": 119.9,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     688.424560546875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3013.75,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 411,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0034-T2",
+   "status": "ok",
+   "seconds": 124.7,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     704.120361328125
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3035.3125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 319,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0035-T1",
+   "status": "ok",
+   "seconds": 124.4,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     687.3157348632812
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3491.640625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0035-T2",
+   "status": "ok",
+   "seconds": 123.2,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     716.3784790039062
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3379.484375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0036-T1",
+   "status": "ok",
+   "seconds": 122.1,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     696.844482421875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2956.3125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 546,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0036-T2",
+   "status": "ok",
+   "seconds": 117.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     707.237548828125
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2950.875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 859,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0037-T1",
+   "status": "ok",
+   "seconds": 118.9,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     680.9365844726562
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3272.515625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 234,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0037-T2",
+   "status": "ok",
+   "seconds": 125.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     694.4273071289062
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3231.078125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 658,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0038-T1",
+   "status": "ok",
+   "seconds": 119.5,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     692.0272216796875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3014.484375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0038-T2",
+   "status": "ok",
+   "seconds": 123.8,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     690.3192749023438
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2982.96875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 423,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0039-T1",
+   "status": "ok",
+   "seconds": 123.4,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     716.0845947265625
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3025.328125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0039-T2",
+   "status": "ok",
+   "seconds": 120.7,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     706.5335083007812
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3127.671875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0040-T1",
+   "status": "ok",
+   "seconds": 119.7,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     686.0127563476562
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2929.4375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 295,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0040-T2",
+   "status": "ok",
+   "seconds": 122.1,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     685.4533081054688
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 2844.0,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0041-T1",
+   "status": "ok",
+   "seconds": 119.1,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     707.3833618164062
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3165.75,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 218,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0041-T2",
+   "status": "ok",
+   "seconds": 125.8,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     687.7681274414062
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3138.4375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 50,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0042-T1",
+   "status": "ok",
+   "seconds": 120.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     684.6260986328125
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3188.4375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0042-T2",
+   "status": "ok",
+   "seconds": 123.7,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     707.0633544921875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3127.46875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 33,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0043-T1",
+   "status": "ok",
+   "seconds": 124.2,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     709.7029418945312
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3219.765625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 325,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0043-T2",
+   "status": "ok",
+   "seconds": 123.0,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     675.580078125
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3232.71875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 267,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0044-T1",
+   "status": "ok",
+   "seconds": 121.7,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     704.8843383789062
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3219.21875,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 172,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0044-T2",
+   "status": "ok",
+   "seconds": 121.2,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     696.6050415039062
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3148.15625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0045-T1",
+   "status": "ok",
+   "seconds": 117.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     703.6588134765625
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3202.8125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0045-T2",
+   "status": "ok",
+   "seconds": 125.1,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     703.0332641601562
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3134.390625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0046-T1",
+   "status": "ok",
+   "seconds": 121.4,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     678.9269409179688
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3263.90625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 132,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0046-T2",
+   "status": "ok",
+   "seconds": 119.4,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     706.6376342773438
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3248.828125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 271,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0047-T1",
+   "status": "ok",
+   "seconds": 122.2,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     686.7559204101562
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3443.84375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0047-T2",
+   "status": "ok",
+   "seconds": 121.3,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     691.9369506835938
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3448.859375,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 0,
+    "gt_lesion_fraction_inside_lung_mask": null
+   }
+  },
+  {
+   "exam_id": "SYN-0048-T1",
+   "status": "ok",
+   "seconds": 121.8,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     711.4143676757812
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3374.640625,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 310,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  },
+  {
+   "exam_id": "SYN-0048-T2",
+   "status": "ok",
+   "seconds": 116.9,
+   "qc": {
+    "warnings": [],
+    "hu_range": [
+     -1024.0,
+     720.102294921875
+    ],
+    "hu_plausible": true,
+    "lung_volume_ml": 3291.78125,
+    "lung_mask_ok": true,
+    "ok": true,
+    "gt_lesion_voxels": 678,
+    "gt_lesion_fraction_inside_lung_mask": 1.0
+   }
+  }
+ ]
+}

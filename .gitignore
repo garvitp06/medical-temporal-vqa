@@ -1,0 +1,12 @@
+data/raw/
+data/processed/
+experiments/*/maps/
+experiments/feature_extractor/*_crops.pt
+experiments/vqa/tensor_cache_*.pt
+experiments/vqa/*_partial.pt
+weights/*.pth
+storage/
+frontend/node_modules/
+__pycache__/
+.venv/
+.idea/

@@ -1,0 +1,184 @@
+{
+ "name": "contextflow",
+ "started": "2026-10-24T11:18:26",
+ "config": {
+  "seed": 0,
+  "generalist_checkpoint": "experiments/feature_glow/best.pt",
+  "contextflow": {
+   "discrete_cardinalities": [
+    3
+   ],
+   "emb_dim": 8,
+   "cn_hidden": 64,
+   "discrete_mode": "embedding"
+  },
+  "train": {
+   "protocol": "normal_only",
+   "batch_size": 32,
+   "epochs": 10,
+   "lr": 0.001,
+   "grad_clip": 50.0,
+   "feature_noise_std": 0.01
+  },
+  "out_dir": "experiments/contextflow",
+  "model": {
+   "feature_space": true,
+   "in_channels": 64,
+   "levels": 1,
+   "squeeze_input": false,
+   "alt_kernels": true,
+   "steps": 8,
+   "hidden": 128
+  }
+ },
+ "environment": {
+  "python": "3.13.17",
+  "platform": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39",
+  "processor": "x86_64",
+  "cpu_count": 2,
+  "cuda": false,
+  "gpu": null,
+  "torch_threads": 2,
+  "versions": {
+   "torch": "2.14.1+cu130",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "SimpleITK": "2.5.6",
+   "pydicom": "3.0.2",
+   "monai": "1.6.1",
+   "sklearn": "1.9.1",
+   "fastapi": "0.162.0",
+   "lungmask": "?"
+  }
+ },
+ "history": [
+  {
+   "epoch": 1,
+   "step": 54,
+   "train_nll": -1.4000340622884255,
+   "val_nll": -1.5027976036071777,
+   "val_nll_std": 0.24077194929122925,
+   "grad_norm_mean": 1.586283982351974,
+   "grad_norm_max": 11.721059799194336,
+   "nonfinite_steps": 0,
+   "lr": 0.0009755282581475768,
+   "epoch_s": 59.9
+  },
+  {
+   "epoch": 2,
+   "step": 108,
+   "train_nll": -1.4685189503210563,
+   "val_nll": -1.5186800956726074,
+   "val_nll_std": 0.2511005401611328,
+   "grad_norm_mean": 0.27280254082547295,
+   "grad_norm_max": 0.3888361155986786,
+   "nonfinite_steps": 0,
+   "lr": 0.0009045084971874737,
+   "epoch_s": 58.1
+  },
+  {
+   "epoch": 3,
+   "step": 162,
+   "train_nll": -1.4755332690698129,
+   "val_nll": -1.5283476114273071,
+   "val_nll_std": 0.2534758448600769,
+   "grad_norm_mean": 0.4597958850639838,
+   "grad_norm_max": 0.6845412254333496,
+   "nonfinite_steps": 0,
+   "lr": 0.0007938926261462366,
+   "epoch_s": 59.1
+  },
+  {
+   "epoch": 4,
+   "step": 216,
+   "train_nll": -1.4806830905101918,
+   "val_nll": -1.5348525047302246,
+   "val_nll_std": 0.2547198235988617,
+   "grad_norm_mean": 0.749456986784935,
+   "grad_norm_max": 1.3205373287200928,
+   "nonfinite_steps": 0,
+   "lr": 0.0006545084971874737,
+   "epoch_s": 58.4
+  },
+  {
+   "epoch": 5,
+   "step": 270,
+   "train_nll": -1.4855308488563255,
+   "val_nll": -1.5458799600601196,
+   "val_nll_std": 0.2562752962112427,
+   "grad_norm_mean": 0.9467853020738672,
+   "grad_norm_max": 1.462350606918335,
+   "nonfinite_steps": 0,
+   "lr": 0.0005,
+   "epoch_s": 58.5
+  },
+  {
+   "epoch": 6,
+   "step": 324,
+   "train_nll": -1.492567929956648,
+   "val_nll": -1.5544570684432983,
+   "val_nll_std": 0.25647884607315063,
+   "grad_norm_mean": 1.0307735094317683,
+   "grad_norm_max": 1.471911072731018,
+   "nonfinite_steps": 0,
+   "lr": 0.00034549150281252633,
+   "epoch_s": 59.3
+  },
+  {
+   "epoch": 7,
+   "step": 378,
+   "train_nll": -1.4996147663504988,
+   "val_nll": -1.564839243888855,
+   "val_nll_std": 0.25840821862220764,
+   "grad_norm_mean": 0.9479039664621707,
+   "grad_norm_max": 1.7856405973434448,
+   "nonfinite_steps": 0,
+   "lr": 0.00020610737385376348,
+   "epoch_s": 60.2
+  },
+  {
+   "epoch": 8,
+   "step": 432,
+   "train_nll": -1.505668419378775,
+   "val_nll": -1.5716699361801147,
+   "val_nll_std": 0.26017266511917114,
+   "grad_norm_mean": 0.750348487385997,
+   "grad_norm_max": 1.147364854812622,
+   "nonfinite_steps": 0,
+   "lr": 9.549150281252633e-05,
+   "epoch_s": 57.5
+  },
+  {
+   "epoch": 9,
+   "step": 486,
+   "train_nll": -1.5094835780285023,
+   "val_nll": -1.5757572650909424,
+   "val_nll_std": 0.2610272765159607,
+   "grad_norm_mean": 0.4789473618622179,
+   "grad_norm_max": 0.6427374482154846,
+   "nonfinite_steps": 0,
+   "lr": 2.4471741852423235e-05,
+   "epoch_s": 61.1
+  },
+  {
+   "epoch": 10,
+   "step": 540,
+   "train_nll": -1.5108178191714816,
+   "val_nll": -1.576482892036438,
+   "val_nll_std": 0.2611161768436432,
+   "grad_norm_mean": 0.31475753613092283,
+   "grad_norm_max": 0.41020524501800537,
+   "nonfinite_steps": 0,
+   "lr": 0.0,
+   "epoch_s": 61.4
+  }
+ ],
+ "notes": [],
+ "generalist_val_nll": -1.4928370714187622,
+ "n_trainable": 2234584,
+ "note": "generalist frozen; specialist = context encoder + additive conditional network",
+ "runtime_s": 595.0,
+ "best_val_nll": -1.576482892036438,
+ "checkpoint": "/home/claude/medical-temporal-vqa/experiments/contextflow/best.pt",
+ "checkpoint_selection": "lowest validation NLL (nats/dim) on held-out validation patients"
+}

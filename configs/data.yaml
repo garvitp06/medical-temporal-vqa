@@ -1,0 +1,22 @@
+# Dataset configuration. The default dataset is SYNTHETIC (src/data/synthetic.py).
+# To use a real dataset, point manifest at a JSON list of exam records
+# (exam_id, patient_id, timepoint, dicom_dir, abnormal, optional lesion_mask).
+dataset_name: synthetic_chest_ct_v1
+synthetic:
+  generate: true
+  n_patients: 48
+  frac_abnormal: 0.67
+  seed: 7
+  image_size_xy: 128
+raw_root: data/raw/synthetic
+manifest: data/raw/synthetic/manifest.json
+qa_pairs: data/raw/synthetic/qa_pairs.json
+lesions: data/raw/synthetic/lesions.json
+processed_root: data/processed
+split_file: data/splits/patient_split.json
+split:
+  fractions: [0.6, 0.2, 0.2]
+  seed: 13
+  stratify_key: abnormal
+  held_out_key: null        # e.g. site / scanner when metadata permit
+  held_out_values: []

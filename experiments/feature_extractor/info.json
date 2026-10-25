@@ -1,0 +1,13 @@
+{
+ "args": {
+  "slices": 12,
+  "crops": 6,
+  "crop": 32,
+  "components": 64,
+  "protocol": "normal_only"
+ },
+ "explained_variance": 0.9850543737411499,
+ "n_train_exams": 24,
+ "n_val_exams": 8,
+ "extractor": "lungmask U-Net R231 down_path[1]+[2] (frozen, pretrained)"
+}

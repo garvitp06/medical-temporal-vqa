@@ -1,0 +1,6 @@
+method: rigid            # rigid | rigid+bspline
+sampling_percentage: 0.2
+iterations: 200
+min_lung_dice: 0.85
+min_ncc_lung: 0.30
+seed: 42

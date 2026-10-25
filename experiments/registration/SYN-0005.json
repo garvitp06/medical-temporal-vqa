@@ -1,0 +1,46 @@
+{
+ "method": "rigid",
+ "final_metric_mattes_mi": -1.300500497402485,
+ "stop_condition": "RegularStepGradientDescentOptimizerv4: Gradient magnitude tolerance met after 20 iterations. Gradient magnitude (7.25127e-05) is less than gradient magnitude tolerance (0.0001).",
+ "ncc_lung_before": 0.2689152390469742,
+ "ncc_lung_after": 0.8438827642363175,
+ "lung_dice_before": 0.9070027537802344,
+ "lung_dice_after": 0.972573289092694,
+ "rigid_params": {
+  "rotation_deg": [
+   -0.7057110598468231,
+   -1.4605997997294062,
+   1.1746354125768281
+  ],
+  "translation_mm": [
+   -0.07596371720722768,
+   -5.471216856261198,
+   -8.195597496033677
+  ],
+  "center_mm": [
+   -2.0880499811495667,
+   3.742565162149553,
+   -0.8470785836589554
+  ]
+ },
+ "reliable": true,
+ "quality": "acceptable",
+ "failure_reasons": [],
+ "patient_id": "SYN-0005",
+ "split": "train",
+ "earlier": "SYN-0005-T1",
+ "later": "SYN-0005-T2",
+ "seconds": 7.4,
+ "simulated_motion": {
+  "rotation_deg": [
+   0.7223278583177173,
+   1.4694749867163495,
+   -1.1566897838119035
+  ],
+  "translation_mm": [
+   0.3819697299198026,
+   5.304947665570452,
+   8.183586279811003
+  ]
+ }
+}

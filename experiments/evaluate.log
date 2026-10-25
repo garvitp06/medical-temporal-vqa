@@ -1,0 +1,13 @@
+anomaly eval intensity_baseline
+anomaly eval glow
+anomaly eval feature_glow
+anomaly eval contextflow
+registration eval
+temporal eval intensity_baseline
+temporal eval glow
+temporal eval feature_glow
+temporal eval contextflow
+temporal ablations
+vqa eval vqa_with_anomaly
+vqa eval vqa_without_anomaly
+wrote /home/claude/medical-temporal-vqa/reports/results/results.json and reports/RESULTS.md

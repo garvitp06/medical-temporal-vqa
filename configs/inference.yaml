@@ -1,0 +1,23 @@
+detector: contextflow                       # contextflow | glow | intensity_baseline
+detector_checkpoint: experiments/contextflow/best.pt
+vqa_checkpoint: experiments/vqa/vqa_with_anomaly.pt
+use_gpu: true
+preprocessing:
+  target_spacing: [2.5, 2.5, 2.5]
+  window_center: -600
+  window_width: 1500
+  normalize: window_minus1_1
+  lung_mask_method: auto
+  lungmask_weights: weights/unet_r231-d5d2fc3d.pth
+registration:
+  method: rigid
+  min_lung_dice: 0.85
+  min_ncc_lung: 0.30
+matching:
+  mode: combined
+  max_distance_mm: 25
+localization:
+  threshold: null          # null -> validation-selected voxel threshold stored in the checkpoint
+  min_volume_mm3: null     # null -> validation-selected candidate rule stored in the checkpoint
+  min_peak_score: null
+stable_band_pct: 15

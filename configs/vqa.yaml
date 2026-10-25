@@ -1,0 +1,12 @@
+seed: 0
+grid: [32, 48, 48]
+epochs: 30
+lr: 0.0005
+batch_size: 16
+region_loss_weight: 0.5
+paraphrase_augmentation: true
+flip_augmentation: true      # left/right flip with laterality answer swap
+width: 16                      # encoder base width
+init_temporal_from_single: true
+temporal_lr: 0.0003
+temporal_epochs: 40

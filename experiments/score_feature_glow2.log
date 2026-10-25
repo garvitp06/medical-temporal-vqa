@@ -1,0 +1,41 @@
+calibration {'mean': 96.62821197509766, 'std': 50.24650573730469, 'n_voxels': 1634761} 860.6s
+SYN-0002-T1 reused
+SYN-0002-T2 reused
+SYN-0008-T1 reused
+SYN-0008-T2 reused
+SYN-0011-T1 reused
+SYN-0011-T2 reused
+SYN-0012-T1 reused
+SYN-0012-T2 reused
+SYN-0013-T1 reused
+SYN-0013-T2 reused
+SYN-0016-T1 reused
+SYN-0016-T2 reused
+SYN-0017-T1 reused
+SYN-0017-T2 118.13s vol_score=4.37
+SYN-0020-T1 99.79s vol_score=4.22
+SYN-0020-T2 99.77s vol_score=5.26
+SYN-0023-T1 114.88s vol_score=4.51
+SYN-0023-T2 115.72s vol_score=4.61
+SYN-0029-T1 101.35s vol_score=4.21
+SYN-0029-T2 111.23s vol_score=5.07
+SYN-0032-T1 102.96s vol_score=5.90
+SYN-0032-T2 92.24s vol_score=5.47
+SYN-0034-T1 100.28s vol_score=5.40
+SYN-0034-T2 103.88s vol_score=5.51
+SYN-0035-T1 112.35s vol_score=3.96
+SYN-0035-T2 93.07s vol_score=3.68
+SYN-0040-T1 84.12s vol_score=5.20
+SYN-0040-T2 81.44s vol_score=4.55
+SYN-0041-T1 107.01s vol_score=4.97
+SYN-0041-T2 121.31s vol_score=4.14
+SYN-0042-T1 102.62s vol_score=4.92
+SYN-0042-T2 108.37s vol_score=4.74
+SYN-0043-T1 111.8s vol_score=5.81
+SYN-0043-T2 92.07s vol_score=5.97
+SYN-0044-T1 111.1s vol_score=5.21
+SYN-0044-T2 110.1s vol_score=5.03
+SYN-0046-T1 85.67s vol_score=4.98
+SYN-0046-T2 95.81s vol_score=4.94
+selected threshold 4.5 (val mean Dice 0.558)
+EXIT 0

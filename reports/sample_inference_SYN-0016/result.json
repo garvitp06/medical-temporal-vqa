@@ -1,0 +1,599 @@
+{
+ "warnings": [],
+ "later": {
+  "exam_ref": "later",
+  "qc": {
+   "warnings": [],
+   "hu_range": [
+    -1024.0,
+    700.7872924804688
+   ],
+   "hu_plausible": true,
+   "lung_volume_ml": 3093.75,
+   "lung_mask_ok": true,
+   "ok": true
+  },
+  "volume_score": 4.698470115661621,
+  "method": "contextflow",
+  "n_candidates": 1,
+  "candidates": [
+   {
+    "candidate_id": "C1",
+    "n_voxels": 235,
+    "volume_mm3": 3671.875,
+    "bbox_voxel": [
+     61,
+     57,
+     37,
+     68,
+     68,
+     45
+    ],
+    "bbox_mm": [
+     -91.00472220868093,
+     -38.21750636171754,
+     24.698793537915037,
+     -71.00472220868093,
+     -10.71750636171754,
+     42.19879353791504
+    ],
+    "bbox_volume_mm3": 9625.0,
+    "centroid_voxel": [
+     63.736170212765956,
+     61.39148936170213,
+     39.646808510638294
+    ],
+    "centroid_mm": [
+     -83.1377009320852,
+     -25.988782957462206,
+     32.789219069829926
+    ],
+    "longest_diameter_mm": 28.117376914898998,
+    "max_score": 5.265666961669922,
+    "mean_score": 4.579283237457275,
+    "laterality": "right",
+    "zone": "middle",
+    "key_slice": 65,
+    "feature": [],
+    "mean_hu": -107.92617797851562
+   }
+  ],
+  "shape_zyx": [
+   101,
+   146,
+   146
+  ],
+  "spacing_xyz": [
+   2.5,
+   2.5,
+   2.5
+  ],
+  "timings": {
+   "anomaly_s": 49.88,
+   "localization_s": 0.04,
+   "load_preprocess_s": 74.88
+  }
+ },
+ "earlier": {
+  "exam_ref": "earlier",
+  "qc": {
+   "warnings": [],
+   "hu_range": [
+    -1024.0,
+    711.5468139648438
+   ],
+   "hu_plausible": true,
+   "lung_volume_ml": 3001.390625,
+   "lung_mask_ok": true,
+   "ok": true
+  },
+  "volume_score": 4.594030380249023,
+  "method": "contextflow",
+  "n_candidates": 1,
+  "candidates": [
+   {
+    "candidate_id": "C1",
+    "n_voxels": 235,
+    "volume_mm3": 3671.875,
+    "bbox_voxel": [
+     58,
+     61,
+     35,
+     65,
+     70,
+     43
+    ],
+    "bbox_mm": [
+     -87.3571811267737,
+     -28.808257785390197,
+     21.477897320862525,
+     -67.3571811267737,
+     -6.308257785390197,
+     38.977897320862525
+    ],
+    "bbox_volume_mm3": 7875.0,
+    "centroid_voxel": [
+     61.212765957446805,
+     64.27659574468085,
+     38.64255319148936
+    ],
+    "centroid_mm": [
+     -77.0007981480503,
+     -19.366768423688086,
+     30.759812214479524
+    ],
+    "longest_diameter_mm": 26.217082451262844,
+    "max_score": 5.23682165145874,
+    "mean_score": 4.495662689208984,
+    "laterality": "right",
+    "zone": "middle",
+    "key_slice": 59,
+    "feature": [],
+    "mean_hu": -70.9512939453125
+   }
+  ],
+  "shape_zyx": [
+   100,
+   139,
+   139
+  ],
+  "spacing_xyz": [
+   2.5,
+   2.5,
+   2.5
+  ],
+  "timings": {
+   "anomaly_s": 49.16,
+   "localization_s": 0.04,
+   "load_preprocess_s": 78.65
+  }
+ },
+ "registration": {
+  "method": "rigid",
+  "final_metric_mattes_mi": -1.2604647063515053,
+  "stop_condition": "RegularStepGradientDescentOptimizerv4: Gradient magnitude tolerance met after 16 iterations. Gradient magnitude (3.23571e-05) is less than gradient magnitude tolerance (0.0001).",
+  "ncc_lung_before": 0.36205708690826993,
+  "ncc_lung_after": 0.882102175009557,
+  "lung_dice_before": 0.8833932769188569,
+  "lung_dice_after": 0.9648450418255045,
+  "rigid_params": {
+   "rotation_deg": [
+    3.527233306214417,
+    -0.04861355283573771,
+    -2.0587142542671093
+   ],
+   "translation_mm": [
+    6.5258929598685755,
+    4.586227161025109,
+    -0.11412358278857258
+   ],
+   "center_mm": [
+    1.1521859187171695,
+    5.191089425263746,
+    -1.449533840745392
+   ]
+  },
+  "reliable": true,
+  "quality": "acceptable",
+  "failure_reasons": []
+ },
+ "entities": [
+  {
+   "match_status": "matched",
+   "earlier": {
+    "candidate_id": "E1",
+    "n_voxels": 210,
+    "volume_mm3": 3281.25,
+    "bbox_voxel": [
+     61,
+     58,
+     37,
+     68,
+     68,
+     45
+    ],
+    "bbox_mm": [
+     -91.00472220868093,
+     -35.71750636171754,
+     24.698793537915037,
+     -71.00472220868093,
+     -10.71750636171754,
+     42.19879353791504
+    ],
+    "bbox_volume_mm3": 8750.0,
+    "centroid_voxel": [
+     63.75714285714286,
+     61.76190476190476,
+     39.93809523809524
+    ],
+    "centroid_mm": [
+     -82.40948411344284,
+     -25.06274445695564,
+     32.841650680772176
+    ],
+    "longest_diameter_mm": 25.276083947860748,
+    "max_score": 5.111520290374756,
+    "mean_score": 4.453505516052246,
+    "laterality": "right",
+    "zone": "middle",
+    "key_slice": 62,
+    "feature": []
+   },
+   "later": {
+    "candidate_id": "L1",
+    "n_voxels": 235,
+    "volume_mm3": 3671.875,
+    "bbox_voxel": [
+     61,
+     57,
+     37,
+     68,
+     68,
+     45
+    ],
+    "bbox_mm": [
+     -91.00472220868093,
+     -38.21750636171754,
+     24.698793537915037,
+     -71.00472220868093,
+     -10.71750636171754,
+     42.19879353791504
+    ],
+    "bbox_volume_mm3": 9625.0,
+    "centroid_voxel": [
+     63.736170212765956,
+     61.39148936170213,
+     39.646808510638294
+    ],
+    "centroid_mm": [
+     -83.1377009320852,
+     -25.988782957462206,
+     32.789219069829926
+    ],
+    "longest_diameter_mm": 28.117376914898998,
+    "max_score": 5.265666961669922,
+    "mean_score": 4.579283237457275,
+    "laterality": "right",
+    "zone": "middle",
+    "key_slice": 65,
+    "feature": [],
+    "mean_hu": -107.92617797851562
+   },
+   "match": {
+    "earlier": 0,
+    "later": 0,
+    "cost": 0.06795332260610192,
+    "iou": 0.9090909090909091,
+    "distance_mm": 1.1792353934647797
+   },
+   "measurements": {
+    "volume_mm3": {
+     "earlier": 3281.25,
+     "later": 3671.875,
+     "absolute": 390.625,
+     "percent": 11.904761904761903,
+     "case": "measured",
+     "source": "candidate_mask"
+    },
+    "bbox_volume_mm3": {
+     "earlier": 8750.0,
+     "later": 9625.0,
+     "absolute": 875.0,
+     "percent": 10.0,
+     "case": "measured",
+     "note": "bounding-box estimate, not lesion volume"
+    },
+    "longest_diameter_mm": {
+     "earlier": 25.276083947860748,
+     "later": 28.117376914898998,
+     "absolute": 2.8412929670382496,
+     "percent": 11.241033116123685,
+     "case": "measured"
+    },
+    "anomaly_score_max": {
+     "earlier": 5.111520290374756,
+     "later": 5.265666961669922,
+     "absolute": 0.15414667129516602,
+     "note": "score change is not evidence of biological growth"
+    },
+    "centroid_displacement_mm": 1.1792353934647797
+   }
+  }
+ ],
+ "answers": [
+  {
+   "routing": {
+    "task": "progression",
+    "confidence": 0.9997114539146423,
+    "method": "learned"
+   },
+   "question": "Has the suspected lesion increased or decreased in size since the previous scan?",
+   "task": "progression",
+   "earlier_exam": "earlier",
+   "later_exam": "later",
+   "matched_candidate_id": "L1",
+   "answer": "decreased",
+   "model_answer": "decreased",
+   "model_confidence": 0.3635025918483734,
+   "confidence_calibrated": true,
+   "measurement_derived_answer": "stable",
+   "measurements": {
+    "volume_mm3": {
+     "earlier": 3281.25,
+     "later": 3671.875,
+     "absolute": 390.625,
+     "percent": 11.904761904761903,
+     "case": "measured",
+     "source": "candidate_mask"
+    },
+    "bbox_volume_mm3": {
+     "earlier": 8750.0,
+     "later": 9625.0,
+     "absolute": 875.0,
+     "percent": 10.0,
+     "case": "measured",
+     "note": "bounding-box estimate, not lesion volume"
+    },
+    "longest_diameter_mm": {
+     "earlier": 25.276083947860748,
+     "later": 28.117376914898998,
+     "absolute": 2.8412929670382496,
+     "percent": 11.241033116123685,
+     "case": "measured"
+    },
+    "anomaly_score_max": {
+     "earlier": 5.111520290374756,
+     "later": 5.265666961669922,
+     "absolute": 0.15414667129516602,
+     "note": "score change is not evidence of biological growth"
+    },
+    "centroid_displacement_mm": 1.1792353934647797
+   },
+   "registration_quality": {
+    "method": "rigid",
+    "final_metric_mattes_mi": -1.2604647063515053,
+    "stop_condition": "RegularStepGradientDescentOptimizerv4: Gradient magnitude tolerance met after 16 iterations. Gradient magnitude (3.23571e-05) is less than gradient magnitude tolerance (0.0001).",
+    "ncc_lung_before": 0.36205708690826993,
+    "ncc_lung_after": 0.882102175009557,
+    "lung_dice_before": 0.8833932769188569,
+    "lung_dice_after": 0.9648450418255045,
+    "rigid_params": {
+     "rotation_deg": [
+      3.527233306214417,
+      -0.04861355283573771,
+      -2.0587142542671093
+     ],
+     "translation_mm": [
+      6.5258929598685755,
+      4.586227161025109,
+      -0.11412358278857258
+     ],
+     "center_mm": [
+      1.1521859187171695,
+      5.191089425263746,
+      -1.449533840745392
+     ]
+    },
+    "reliable": true,
+    "quality": "acceptable",
+    "failure_reasons": []
+   },
+   "coordinates": {
+    "earlier": [
+     -82.40948411344284,
+     -25.06274445695564,
+     32.841650680772176
+    ],
+    "later": [
+     -83.1377009320852,
+     -25.988782957462206,
+     32.789219069829926
+    ]
+   },
+   "answer_text": "Candidate L1: candidate-mask volume 3,281 mm\u00b3 in the earlier examination and 3,672 mm\u00b3 in the later examination (absolute change 391 mm\u00b3, percentage change +11.9%); longest diameter 25.3 mm -> 28.1 mm. Registration quality: acceptable. Model assessment of change: decreased; measurement-derived category: stable. The finding requires clinician review. Research prototype output: suspicious regions are model-flagged areas for clinician review, not diagnoses.",
+   "uncertainty": [
+    "VQA confidence was temperature-scaled on synthetic validation data only; it is not clinically calibrated",
+    "learned VQA answer 'decreased' disagrees with measurement-derived answer 'stable'"
+   ]
+  },
+  {
+   "routing": {
+    "task": "where",
+    "confidence": 0.998536229133606,
+    "method": "learned"
+   },
+   "question": "Where is the suspicious region?",
+   "task": "where",
+   "exam": "later",
+   "answer": "region",
+   "model_confidence": 0.9758777618408203,
+   "confidence_calibrated": true,
+   "candidate_derived_answer": "region",
+   "answer_text": "The most suspicious region (C1) is in the middle zone of the right lung, centred at (-83, -26, 33) mm (LPS), axial slice 66 (1-based), candidate-mask volume 3,672 mm\u00b3. Research prototype output: suspicious regions are model-flagged areas for clinician review, not diagnoses.",
+   "evidence": [
+    {
+     "candidate_id": "C1",
+     "key_slice": 65,
+     "bbox_voxel": [
+      61,
+      57,
+      37,
+      68,
+      68,
+      45
+     ],
+     "bbox_mm": [
+      -91.00472220868093,
+      -38.21750636171754,
+      24.698793537915037,
+      -71.00472220868093,
+      -10.71750636171754,
+      42.19879353791504
+     ],
+     "centroid_mm": [
+      -83.1377009320852,
+      -25.988782957462206,
+      32.789219069829926
+     ],
+     "max_score": 5.265666961669922
+    }
+   ],
+   "uncertainty": [
+    "VQA confidence was temperature-scaled on synthetic validation data only; it is not clinically calibrated"
+   ],
+   "status": "answered"
+  },
+  {
+   "routing": {
+    "task": "laterality",
+    "confidence": 0.9985478520393372,
+    "method": "learned"
+   },
+   "question": "Which lung contains the suspicious finding?",
+   "task": "laterality",
+   "exam": "later",
+   "answer": "right",
+   "model_confidence": 0.671424150466919,
+   "confidence_calibrated": true,
+   "candidate_derived_answer": "right",
+   "answer_text": "Side of suspicious finding: right. Supporting evidence: C1 on axial slice 66 (1-based). Research prototype output: suspicious regions are model-flagged areas for clinician review, not diagnoses.",
+   "evidence": [
+    {
+     "candidate_id": "C1",
+     "key_slice": 65,
+     "bbox_voxel": [
+      61,
+      57,
+      37,
+      68,
+      68,
+      45
+     ],
+     "bbox_mm": [
+      -91.00472220868093,
+      -38.21750636171754,
+      24.698793537915037,
+      -71.00472220868093,
+      -10.71750636171754,
+      42.19879353791504
+     ],
+     "centroid_mm": [
+      -83.1377009320852,
+      -25.988782957462206,
+      32.789219069829926
+     ],
+     "max_score": 5.265666961669922
+    }
+   ],
+   "uncertainty": [
+    "VQA confidence was temperature-scaled on synthetic validation data only; it is not clinically calibrated"
+   ],
+   "status": "answered"
+  },
+  {
+   "routing": {
+    "task": "new_finding",
+    "confidence": 0.9983592629432678,
+    "method": "learned"
+   },
+   "question": "Is there a new suspicious region compared with the previous examination?",
+   "task": "new_finding",
+   "earlier_exam": "earlier",
+   "later_exam": "later",
+   "matched_candidate_id": "L1",
+   "answer": "no",
+   "model_answer": "no",
+   "model_confidence": 0.9185275435447693,
+   "confidence_calibrated": true,
+   "measurement_derived_answer": "no",
+   "measurements": {
+    "volume_mm3": {
+     "earlier": 3281.25,
+     "later": 3671.875,
+     "absolute": 390.625,
+     "percent": 11.904761904761903,
+     "case": "measured",
+     "source": "candidate_mask"
+    },
+    "bbox_volume_mm3": {
+     "earlier": 8750.0,
+     "later": 9625.0,
+     "absolute": 875.0,
+     "percent": 10.0,
+     "case": "measured",
+     "note": "bounding-box estimate, not lesion volume"
+    },
+    "longest_diameter_mm": {
+     "earlier": 25.276083947860748,
+     "later": 28.117376914898998,
+     "absolute": 2.8412929670382496,
+     "percent": 11.241033116123685,
+     "case": "measured"
+    },
+    "anomaly_score_max": {
+     "earlier": 5.111520290374756,
+     "later": 5.265666961669922,
+     "absolute": 0.15414667129516602,
+     "note": "score change is not evidence of biological growth"
+    },
+    "centroid_displacement_mm": 1.1792353934647797
+   },
+   "registration_quality": {
+    "method": "rigid",
+    "final_metric_mattes_mi": -1.2604647063515053,
+    "stop_condition": "RegularStepGradientDescentOptimizerv4: Gradient magnitude tolerance met after 16 iterations. Gradient magnitude (3.23571e-05) is less than gradient magnitude tolerance (0.0001).",
+    "ncc_lung_before": 0.36205708690826993,
+    "ncc_lung_after": 0.882102175009557,
+    "lung_dice_before": 0.8833932769188569,
+    "lung_dice_after": 0.9648450418255045,
+    "rigid_params": {
+     "rotation_deg": [
+      3.527233306214417,
+      -0.04861355283573771,
+      -2.0587142542671093
+     ],
+     "translation_mm": [
+      6.5258929598685755,
+      4.586227161025109,
+      -0.11412358278857258
+     ],
+     "center_mm": [
+      1.1521859187171695,
+      5.191089425263746,
+      -1.449533840745392
+     ]
+    },
+    "reliable": true,
+    "quality": "acceptable",
+    "failure_reasons": []
+   },
+   "coordinates": {
+    "earlier": [
+     -82.40948411344284,
+     -25.06274445695564,
+     32.841650680772176
+    ],
+    "later": [
+     -83.1377009320852,
+     -25.988782957462206,
+     32.789219069829926
+    ]
+   },
+   "answer_text": "New suspicious region compared with the previous examination: no. Matched candidates: 1, potentially new: 0, potentially resolved: 0, uncertain: 0. The finding requires clinician review. Research prototype output: suspicious regions are model-flagged areas for clinician review, not diagnoses.",
+   "uncertainty": [
+    "VQA confidence was temperature-scaled on synthetic validation data only; it is not clinically calibrated"
+   ]
+  },
+  {
+   "routing": {
+    "task": "unsupported",
+    "confidence": 0.9995366334915161,
+    "method": "learned"
+   },
+   "question": "Should we start chemotherapy?",
+   "task": "unsupported",
+   "status": "unsupported",
+   "answer_text": "This question is outside the scope of the system (chest-CT suspicious-region detection, localisation and change assessment). Research prototype output: suspicious regions are model-flagged areas for clinician review, not diagnoses."
+  }
+ ]
+}

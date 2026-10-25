@@ -1,0 +1,19 @@
+# GLOW on frozen PRETRAINED lungmask R231 encoder features (FastFlow/CFLOW-style), single scale, no squeeze.
+seed: 0
+model:
+  feature_space: true
+  in_channels: 64          # PCA components of lungmask features
+  levels: 1
+  squeeze_input: false
+  alt_kernels: true        # coupling convs alternate 3x3 / 1x1
+  steps: 8
+  hidden: 128
+train:
+  protocol: normal_only
+  batch_size: 32
+  epochs: 20
+  lr: 0.0005
+  grad_clip: 50.0
+  warmup_steps: 50
+  feature_noise_std: 0.01
+out_dir: experiments/feature_glow

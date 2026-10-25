@@ -1,0 +1,16 @@
+seed: 0
+generalist_checkpoint: experiments/feature_glow/best.pt
+contextflow:
+  discrete_cardinalities:
+  - 3
+  emb_dim: 8
+  cn_hidden: 64
+  discrete_mode: embedding
+train:
+  protocol: normal_only
+  batch_size: 32
+  epochs: 10
+  lr: 0.001
+  grad_clip: 50.0
+  feature_noise_std: 0.01
+out_dir: experiments/contextflow
